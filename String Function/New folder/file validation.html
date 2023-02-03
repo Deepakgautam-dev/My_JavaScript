@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="file" name="" id="fu" onchange="demo(this)">
+	<b></b><br><br>
+	<button disabled>save</button>
+
+	<script type="text/javascript">
+		var demo=(x)=>
+		{
+			var fpath=x.value
+			var ext=fpath.substr(fpath.lastIndexOf(".")+1).toUpperCase()
+		    //alert(ext)
+		    var bol=document.querySelector('b')
+		    if(ext=='JPG' || ext=='JPEG'|| ext=='PDF')
+		    {
+		    	bol.innerText="Valid File"
+		    	bol.style.color="green"
+		    	document.querySelector('button').disabled=false
+		    }
+		    else
+		    {
+		    	bol.innerText="Invalid File"
+		    	bol.style.color="red"
+		    	document.querySelector('button').disabled=true
+		    }
+		}
+	</script>
+
+</body>
+</html>

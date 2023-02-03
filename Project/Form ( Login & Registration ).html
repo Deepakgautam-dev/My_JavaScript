@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form</title>
+	<style type="text/css">
+		.outer
+		{
+			min-height: 50px;
+			width: 400px;
+			padding: 10px;
+			box-sizing: border-box;
+			background: linear-gradient(45deg, #00FFED, #00B8BA);
+		}
+		.top
+		{
+			line-height: 40px;
+			width: 400px;
+		}
+		.reg
+		{
+			font-size: 18px;
+			width: 380px;
+			min-height: 200px;
+			background: ;
+			margin: 10px 0px;
+		}
+		.reg input{
+			width: 95%; 
+			height: 25px; 
+			font-size: 15px;
+			margin: 6px 0px;
+			padding-left: 10px;
+		}
+		.login
+		{
+			font-size: 18px;
+			background: ;
+			margin: 10px 0px;
+		}
+		.login input{
+			width: 95%; 
+			height: 25px; 
+			font-size: 15px;
+			margin: 6px 0px;
+			padding-left: 10px;
+		}
+		button
+		{
+			height: 30px;
+			border: none;
+			background: linear-gradient(45deg, #FFA62E, #EA4D2C);
+			color: white;
+			font-weight: bold;
+			border-radius: 3px;
+			font-size: 16px;
+		}
+
+		.reg,.login
+		{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="top">
+			<button onclick="demo()" id="cng">REGISTRATION</button>
+		</div>
+
+		<div class="reg">
+			Name :<br>
+			<input type="text" placeholder="Enter Your Name"><br>
+			Email :<br>
+			<input type="email" placeholder="Enter Your Email"><br>
+			Mobile :<br>
+			<input type="text" placeholder="Enter Your Mobile Number"><br>
+			<button style="margin-top: 15px;">Registration</button>
+			
+		</div>
+
+		<div class="login">
+			Userid<br>
+			<input type="email" placeholder="Enter Your Name" class="txt" name=""><br>
+			Password<br>
+			<input type="text" placeholder="Email.." class="txt" name=""><br>
+			<button style="margin-top: 15px;">Login</button><br><br>
+			<small><a href="#" id="f">Forget Password</a></small>
+		</div>
+	</div>
+
+
+
+
+	<script type="text/javascript">
+		
+		var demo=()=>
+		{
+			var regcng=document.querySelector('#cng')
+			var reg=document.querySelector('.reg')
+			var log=document.querySelector('.login')
+			
+			if(regcng.innerHTML=='REGISTRATION')
+			{
+			reg.style.display="block"
+			log.style.display="none"
+			regcng.innerHTML="Login"
+			}
+			else if(regcng.innerHTML!='REGISTRATION')
+			{
+				log.style.display="block"
+				reg.style.display="none"
+				regcng.innerHTML="REGISTRATION"
+
+			}
+
+		}
+	</script>
+
+</body>
+</html>

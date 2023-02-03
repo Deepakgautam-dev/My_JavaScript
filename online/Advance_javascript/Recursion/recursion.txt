@@ -1,0 +1,93 @@
+Recursion : colling of function itself. in cyclic nature and backTracking is called Recursion.
+
+for example : factorial is recursing and bracktracking in Nature_
+
+fatorial(n)=n*factorial(n-1)
+
+======================================
+if(n==1)
+{
+	return 1;
+}
+else
+{
+	return n*factorial(n-1)
+}
+======================================
+
+
+Recursion will stop after top of stack is reached
+
+Tracing the Recursion
+===========================   Turing Alen
+
+
+How to program using Recursion
+
+1. Withoute loop means recursion 
+
+5*4*3*2*1 => 120  (Number of step less)
+or 
+1*2*3*4*5 => 120  (Number of step more)
+
+  
+  1. Race Condition
+  2. Base Condition 
+     ( Top of the stack => final,, Destination=> End, n=0 )
+
+
+
+Successive  calling Recursing
+=====================================
+=> 
+
+function a()
+{
+	console.log('a is running')
+	b()
+}
+function b()
+{
+	console.log('b is running')
+	c();
+}
+function c()
+{
+	console.log('c is running')
+	d()
+}
+function d()
+{
+	console.log('d is running')
+	a()
+
+}
+
+a()
+
+
+normal,recursion,cyclic,successing
+
+recursion
+=======================
+
+function a(i=1)
+{
+    var num=2
+	if(i==11)
+	{return;}
+	else
+	{
+	i++
+	num*a(i)
+	}
+}
+
+a()
+
+a();
+
+
+
+
+

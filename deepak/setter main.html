@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		class EmpInfo{
+			constructor(name, age, salary, company)
+			{
+				this.Name=name
+				this.Age=age
+				this.Salary=salary
+				this.Company=company
+			}
+			get show()  // getter function
+			{
+               console.log(`Name : ${this.Name}
+               	            Age : ${this.Age}
+               	            Salary : ${this.Salary}
+               	            Company : ${this.Company}`)
+
+			}
+			set setData(x)  // setter function
+			{
+				this.Name=x
+			}
+		}
+		var obj=new EmpInfo("Deepak",24,56000,"Techpile")
+		obj.show
+		obj.setData="krishna"
+		obj.show
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		obj.show()
+
+	</script>
+
+</body>
+</html>

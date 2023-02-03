@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>modal</title>
+	<style type="text/css">
+		.img1
+		{
+			height: 200px;
+			width: 300px;
+			border: 10px groove aqua;
+			padding: 10px;
+			border-radius: 10px;
+			margin: 10px;
+		}
+		#modal
+		{
+			width: 100%;
+			min-height: 100vh;
+			background: rgba(0, 0, 0, .5);
+			position: absolute;
+			top:0px;
+			left: 0px;
+			display: none;
+		}
+		#minner
+		{
+			min-height: 300px;
+			width: 600px;
+			border-radius: 10px;
+			padding: 25px;
+			box-sizing: border-box;
+			box-shadow: 0px 0px 15px 2px white;
+			background: white;
+			margin-top: 80px;
+		}
+		#imgMain
+		{
+			width: 500px;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<h1>Image gallery</h1>
+	<img src="slid2.jpg" class="img1" onclick="demo(this)" />
+	<img src="slid3.jpg" class="img1" onclick="demo(this)"/>
+	<img src="img2.jpg" class="img1" onclick="demo(this)"/><br/>
+	<img src="img3.jpg" class="img1" onclick="demo(this)"/>
+	<img src="img4.jpg" class="img1" onclick="demo(this)"/>
+	<img src="slid3.jpg" class="img1" onclick="demo(this)"/>
+
+	<!--Start modal-->
+	<div id="modal">
+		<div id="minner">
+			<div style="text-align: center; font-size: 30px;">IMAGE <b style="color:red">GALLERY</b><a href="modal.html"><b style="color:red; font-size: 20px; float: right;">X</b></a></div>
+			<hr/>
+			<img id="imgMain" />
+		</div>
+	</div>
+	<!--End modal-->
+	</center>
+
+
+
+	<script type="text/javascript">
+		var modal=document.querySelector('#modal')
+		let demo=(a)=>
+		{
+			modal.style.display="block"
+			document.querySelector('#imgMain').src=a.src
+		}
+	</script>
+
+</body>
+</html>

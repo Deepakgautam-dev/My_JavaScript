@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>img</title>
+	<style type="text/css">
+		img
+		{
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<img src="slid2.jpg" id="img1">
+	<img src="slid3.jpg" id="img2"><br>
+	<button onclick="demo()">CLICK ME</button>
+
+	<script type="text/javascript">
+		var demo=()=>
+		{
+			var i1=document.querySelector("#img1")
+			var i2=document.querySelector("#img2")
+			//alert(i1.src)
+			i2.src=i1.src
+		}
+	</script>
+
+</body>
+</html>

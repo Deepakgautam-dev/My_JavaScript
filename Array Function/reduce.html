@@ -1,0 +1,15 @@
+<script>
+var arr=[1,2,3,4,5,66,78,9,]   //trailing comma
+var x=arr.reduce((total,data,index,arr)=>{
+	total=total+data
+	return total
+})
+document.write("Sum is : "+x)
+
+// use forEach function not return function
+// var sum=0
+// arr.forEach((data)=>{
+// 	sum=sum+data
+// })
+// document.write(sum) 
+</script>

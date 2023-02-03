@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Test{
+			static UserId="TPTUT76"
+			static Password="TPT78976"
+			constructor(n,a)
+			{
+				this.Name=n
+				this.Age=a
+			}
+			showData()  //instance method
+			{
+				console.log(`UserId : ${Test.UseId}, Password : ${Test.Password}, Name : ${this.Name}, Age : ${this.Age}`)
+			}
+			static myMethod()  //static method
+			{
+				console.log(`UserId : ${Test.UseId}, Password : ${Test.Password}, Name : ${this.Name}, Age : ${this.Age}`)
+			}
+		}
+		Test.myMethod()
+		var obj= new Test("Ajens",34)
+		obj.showData()
+	</script>z
+
+</body>
+</html>

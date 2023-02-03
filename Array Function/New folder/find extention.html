@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>extension</title>
+</head>
+<body>
+	<input type="file" onchange="demo(this)" name="">
+
+	<script type="text/javascript">
+		function demo(obj)
+		{
+			var e=obj.value
+			//var index=e.slice(e.lastIndexOf("."))
+			var index=e.split(".").pop()
+			alert(index)
+		}
+	</script>
+
+</body>
+</html>

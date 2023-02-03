@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>dynmicaly</title>
+</head>
+<body>
+	<h3 style="font-family:arial;">Select District</h3>
+	<i>this is dropdown list</i>
+	<span></span>
+
+
+	<script>
+		var state=["--Select--","ambedkar Nagar","Bihar","Azamgarh","sultanpur"]
+        var ambpart =["--Select Village--","Rampur Sakarwari","Siswa","Bewana"]
+        var slp =["--Select Village--","Locknathpur","vikash nagar","tulsipur"]
+        var slp1 =["--Select Village--","Vijay Nagar","suraPur","Akbarpur"]
+		
+		var para=document.querySelector('i')
+		var spn=document.querySelector('span')
+		var add="<select onchange='demo(this)'>"
+		for(var i=0; i<=4; i++)
+		{
+			//alert(state[i])
+			add+="<option>"+state[i]+"</option>"
+		}
+		add+="</select>"
+		para.innerHTML=add
+
+        function demo(x)
+        {
+        	//alert(x.value)
+        	switch(x.value)
+        	{
+        	case "ambedkar Nagar":
+                 var subo1="<select>"
+                 for(var i=0; i<4; i++)
+                 {
+                 	subo1+="<option>"+ambpart[i]+"</option>"
+                 }
+                 subo1+="</select>"
+                 spn.innerHTML=subo1
+                 break;
+        	
+        	case "Bihar":
+                 var subo2="<select>"
+                 for(var i=0; i<4; i++)
+                 {
+                 	subo2+="<option>"+slp[i]+"</option>"
+                 }
+                 subo2+="</select>"
+                 spn.innerHTML=subo2
+                 break;
+            case "Azamgarh":
+                 var subo3="<select>"
+                 for(var i=0; i<4; i++)
+                 {
+                 	subo3+="<option>"+slp1[i]+"</option>"
+                 }
+                 subo3+="</select>"
+                 spn.innerHTML=subo3
+        	}
+
+        }
+	</script>
+
+</body>
+</html>

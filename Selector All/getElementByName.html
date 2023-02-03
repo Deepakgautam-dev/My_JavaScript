@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>getElementByName</title>
+</head>
+<body>
+
+<p name="a">Para1</p>
+<p name="b">Para2</p>
+<p name="a">Para3</p>
+<p name="a">Para4</p>
+<p name="b">Para5</p>
+<button onclick="demo()">CLICK ME</button><br/><br/>
+
+<div></div>
+
+<script type="text/javascript">
+	let demo=()=>
+	{
+	var x=document.getElementsByName('a') // p1, p3, p4
+	var r="<select>"
+	x.forEach((c)=>{
+		r+="<option>"+c.innerText+"</option>"
+	})
+	r+="</select>"
+	document.querySelector('div').innerHTML=r
+	}
+
+</script>
+
+</body>
+</html>

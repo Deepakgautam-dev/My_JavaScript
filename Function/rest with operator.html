@@ -1,0 +1,16 @@
+<script type="text/javascript">
+let demo=(...x)=>     // ...x rest operator
+ {
+ var sum =1
+ for(var a of x)
+ {
+    sum=sum*a
+ }
+ document.write(`Multipli is : ${sum} <br/>`)
+ }
+
+ demo(10)              // x=[10]
+ demo(30,80)           // x=[30,80]
+ demo(100,20,50)       // x=[100,20,50]
+ demo(10,20,40,60)     // x=[10,20,40,60]
+</script>

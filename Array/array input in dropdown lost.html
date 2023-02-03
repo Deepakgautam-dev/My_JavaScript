@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>array</title>
+</head>
+<body>
+	<p></p>
+
+
+	<script type="text/javascript">
+		/*/ 1 method
+
+		var arr=[]
+		var sre="<select>"
+		for(var i=0; i<=9; i++)
+		{
+			var x=prompt('Enter number...')
+			arr[i]=x
+			sre=sre+"<option>"+arr[i]+"</option>"
+		}
+		sre=sre+"</select>"
+		document.querySelector('p').innerHTML=sre
+
+		*/// 2 method
+
+		var arr=[]
+		var c=['red','green','black','aqua','lightgreen','navy','skyblue','pink','gray','purple','yellow']
+		for(var i=0; i<=9; i++)
+		{
+			var x=prompt('Enter number...')
+			arr[i]=x
+			
+		}
+		var sre="<select>"
+		var  y=0
+		for(var x of arr)
+		{
+			sre=sre+"<option style='color:"+c[y]+";'>"+x+"</option>"
+			y++;
+		}
+		sre=sre+"</select>"
+		document.write(sre)
+
+	</script>
+
+</body>
+</html>

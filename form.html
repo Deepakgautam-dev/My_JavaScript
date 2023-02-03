@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form</title>
+	<style type="text/css">
+		#box
+		{
+			width: 400px;
+			background: linear-gradient(45deg,blue, skyblue);
+			padding: 10px;
+			min-height: 40px;
+			box-sizing: border-box;
+			margin: 50px auto;
+			font-size: 20px;
+			color: white;
+		}
+		.txt
+		{
+			height: 40px;
+			width: 95%;
+			border: none;
+			border-radius: 5px;
+			padding-left: 10px;
+		}
+		.btn
+		{
+			height: 40px;
+			width: 30%;
+			border: none;
+			border-radius: 5px;
+			padding-left: 10px;
+			background: black;
+			color: white;
+			margin-top: 9px;
+		}
+		#header
+		{
+			height: 45px;
+			width: 380px;
+			color: white;
+			text-align: center;
+			line-height: 45px;
+		}
+		#left
+		{
+			width: 180px;
+			height: 45px;
+			float: left;
+			background: yellow;
+			color: black;
+			margin-right: 10px;
+		}
+		#right
+		{
+			width: 180px;
+			height: 45px;
+			float: left;
+			background: yellow;
+			color: black;
+			margin-left: 10px;
+		}
+		#fpass
+		{
+			display: none;
+		}
+		#login
+		{
+			display: none;
+		}
+		#reg
+		{
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="header">
+			<div id="left">LOGIN</div>
+			<div id="right">REGISTER</div>
+			</div>
+			<p id="reg">
+				Name<br>
+				<input type="text" placeholder="Enter Your Name" class="txt" name=""><br>
+				Mobile<br>
+				<input type="text" placeholder="Enter Your Mobile Number" class="txt" name=""><br>
+				Email<br>
+				<input type="email" placeholder="Enter Your Email" class="txt" name=""><br>
+				<input type="button" onclick="demo()" value="save" class="btn" name="">
+			</p>
+			<p id="login">
+				Userid<br>
+				<input type="email" placeholder="Enter Your Name" class="txt" name=""><br>
+				Password<br>
+				<input type="text" placeholder="Email.." class="txt" name=""><br>
+				<input type="button" value="Login" class="btn" name=""><br>
+				<a href="#" id="f">Forget Password</a>
+			</p>
+			<p id="fpass">
+				Enter Your  Registered Mbile<br>
+				<input type="email" placeholder="Password" class="txt" name=""><br>
+				Password<br>
+				<input type="text" placeholder="Email.." class="txt" name=""><br>
+				<input type="button" value="Login" class="btn" name="">
+			</p>
+		
+	</div>
+
+	<script type="text/javascript">
+		var login=document.getElementById('login')
+		var reg=document.getElementById('reg')
+		var fpass=document.getElementById('fpass')
+
+		function demo()
+		{
+			login.style.display="block"
+			reg.style.display="none"
+			fpass.style.display="none"
+		}
+		function demo1()
+		{
+			login.style.display="none"
+			reg.style.display="block"
+			fpass.style.display="none"
+		}
+		function demo2()
+		{
+			login.style.display="none"
+			reg.style.display="none"
+			fpass.style.display="block"
+		}
+	</script>
+
+</body>
+</html>

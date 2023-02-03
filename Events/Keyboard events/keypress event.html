@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>KEYPRESS</title>
+</head>
+<body>
+	KEYPRESS <input type="text" name="" id="tex1" onkeypress="demo(this)"><br/>
+	KEYUP<input type="text" name="" id="tex2" onkeyup="demo(this)"><br/>
+	<p></p>
+
+
+	<script type="text/javascript">
+		var demo=(x)=>
+		{
+			document.querySelector('p').innerText=x.value
+			//x.value.length
+		}
+	</script>
+
+</body>
+</html>

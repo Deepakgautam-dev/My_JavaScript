@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array 2</title>
+	<style type="text/css">
+		#box
+		{
+			height: 500px;
+			width: 1000px;
+			border: 20px groove aqua;
+			border-radius: 10px;
+			color: white;
+			text-align: center;
+			line-height: 500px;
+			font-size: 60px;
+			font-family: impact;
+			margin: 0px auto;
+			background: url('slid2.jpg');
+			background-size: 100% 100%;
+
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<h1>Slider</h1><hr>
+	</center>
+	<div id="box">Message..</div>
+
+
+	<script type="text/javascript">
+		var txt=["Welcome to techpile","welcome to javaScript world", "Welcome to Jquery","Welcome To mern"]
+		var arr=['slid3.jpg','slid2.jpg','slid3.jpg','slid2.jpg']
+		i=0
+		function slider()
+		{
+			var dv=document.querySelector('#box')
+			dv.style.background="url('"+arr[i]+"')"
+			dv.style.backgroundSize="cover"
+			dv.innerText=txt[i]
+			i++
+			if(i==arr.length)
+				i=0
+		}
+		window.setInterval(slider,3000)
+		
+	</script>
+
+</body>
+</html>

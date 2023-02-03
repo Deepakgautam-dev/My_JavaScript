@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>random color</title>
+	<style type="text/css">
+		div
+		{
+			width: 700px;
+			height: 450px;
+			border: 10px groove aqua;
+			margin: 50px auto;
+		}
+		p
+		{
+			width: 170px;
+			height: 60px;
+			border: 7px solid black;
+			line-height: 60px;
+			font-size: 30px;
+			text-align: center;
+			margin: 70px auto;
+			background: white;
+		}
+		button
+		{
+			width: 150px;
+			height: 40px;
+			font-size: 21px;
+			font-weight: bold;
+			margin: 120px auto;
+			background: aqua;
+			border: none;
+			border-start-end-radius: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+        <p>#3ea129</p>
+        <button onclick="demo()">Apply Color</button>
+	</div>
+
+
+
+	<script type="text/javascript">
+		
+		var demo=()=>
+		{
+		var str="0123456789abcdef"
+		var color="#"
+		for(var i=0; i<6; i++)
+		{
+			var randnum=Math.floor(Math.random()*16)
+		    var colorIndex=str[randnum]
+		    color+=colorIndex
+		}
+		document.querySelector('p').innerText=color
+		document.querySelector('body').style.background=color
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>techpile</title>
+	<style type="text/css">
+		.outer
+		{
+			width: 300px;
+			height: 400px;
+			margin: 0 auto;
+		}
+		.top
+		{
+			width: 300px;
+			height: 120px;
+		}
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="top">
+			<h1 id="txt">TECHPILE TECHNOLOGY</h1>
+		</div>
+			<button onclick="demo()">Set Style</button>
+	</div>
+
+
+	<script type="text/javascript">
+		function demo()
+		{
+		var hed=document.getElementById("txt")
+		hed.style.color="red"
+		hed.style.background="yellow"
+		hed.style.border="7px solid red"
+		hed.style.transform="rotate(10deg)"
+		}
+	</script>
+
+</body>
+</html>

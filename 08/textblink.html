@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		h1
+		{
+			font-size: 80px;
+			text-align: center;
+			padding: 50px;
+			margin: 0px;
+		}
+		.a
+		{
+			color: red;
+			background: yellow;
+		}
+		.b
+		{
+			color: yellow;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="a">Welcome To Techpile</h1>
+
+	<button>Change Color</button>
+
+	<script type="text/javascript">
+		var demo=()=>
+		{
+			var x=document.querySelector("h1")
+			if(x.getAttribute("class")=="a")
+			{
+				x.setAttribute("class","b")
+			}
+			else
+			{
+				x.setAttribute("class","a")
+			}
+		}
+		setInterval(demo,1000)
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>texbox</title>
+</head>
+<body>
+	<button>Converter</button><br><br>
+	<input type="text" name="" onkeyup="demo()">
+
+	<p></p>
+
+	<script type="text/javascript">
+		var demo=()=>
+		{
+			var apn=document.querySelector("input").value
+			var arr=apn.split(" ")
+			var newarr=[]
+			newarr=arr.map((item)=>{
+				return item[0].toUpperCase()+item.slice(1).toLowerCase()
+			})
+			var ctn=newarr.join(" ")
+			document.querySelector("p").innerText=ctn
+		}
+		
+	</script>
+
+</body>
+</html>

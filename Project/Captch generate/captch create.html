@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>captcha</title>
+	<style type="text/css">
+		p
+		{
+			height: 45px;
+			width: 200px;
+			border-radius: 4px;
+			background: url('captcha.png');
+			background-size: cover;
+			text-align: center;
+			line-height: 45px;
+			font-size: 37px;
+			letter-spacing:12px;
+			
+
+		}
+		img
+		{
+			width: 35px;
+			position: absolute;
+			top: 46px;
+			left: 220px;
+
+		}
+	</style>
+</head>
+<body onload="demo()">
+	<p><s></s></p><img onclick="demo()" src="refresh.png">
+	<input type="text" name=""> <b> </b><br/><br>
+	<button onclick="demo1()">save</button>
+
+
+	<script type="text/javascript">
+		var demo=()=>
+		{
+		var str="gfhjgkdjrNHSRUYNGFsrkjDHRY#6$%@56878865454356"
+		var len=str.length
+		//alert(len)
+		
+		var add=""
+		for(var i=0; i<6; i++)
+		{
+			var chIndes=Math.floor(Math.random()*len)
+		    var Ich=str[chIndes]
+		    add+=Ich
+		}
+		
+		document.querySelector('s').innerText=add
+		}
+
+		function demo1()
+		{
+			var c=document.querySelector('input')
+			var p=document.querySelector('p')
+			var msg=document.querySelector('b')
+			if(p.innerText==c.value.trim())
+			{
+				msg.innerText="Valid Captch"
+				msg.style.color="green"
+			}
+			else
+			{
+			    msg.innerText="Invalid Captch"
+			    msg.style.color="red"	
+			}
+		}
+	</script>
+
+</body>
+</html>

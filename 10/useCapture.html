@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div>DIV
+		<h1>H1 Tag</h1>
+	</div>
+
+	<script type="text/javascript">
+		/*
+		function demo()
+		{
+			alert("i am div tag")
+		}
+		function demo1(event)
+		{
+			alert("i am h1 tag")
+			event.stopPropagation()
+		}
+		var elm=document.querySelector('div')
+		elm.addEventListener("click",demo,true)
+
+		var elm1=document.querySelector('h1')
+		elm1.addEventListener("click",demo1,true)  */
+
+		document.querySelector("div").addEventListener("click",function () {alert("this is div")})
+		document.querySelector("h1").addEventListener("click",function (a) {alert("this is h1") 
+			a.stopPropagation()})
+	</script>
+
+</body>
+</html>

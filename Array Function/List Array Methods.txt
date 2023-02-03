@@ -1,0 +1,7 @@
+reverse()
+slice()
+fill()
+indexOf()
+reduce()
+includes()
+sort()

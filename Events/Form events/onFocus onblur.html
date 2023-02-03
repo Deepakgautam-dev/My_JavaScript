@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>onblur</title>
+</head>
+<body>
+	onfocus:<br/>
+	<input type="text" name="" onfocus="demo(this)" />
+	<p id="p1"></p><br/><br/>
+	onblur : <br/>
+	<input type="text" name="" onblur="demo2(this)" />
+	<p id="p2"></p>
+
+
+
+	<script type="text/javascript">
+		let demo=(x)=>
+		{
+			document.querySelector('#p1').innerText=x.value
+		}
+		let demo2=(x)=>
+		{
+			document.querySelector('#p2').innerText=x.value
+		}
+	</script>
+
+</body>
+</html>

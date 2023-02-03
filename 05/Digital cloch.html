@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>clock</title>
+	<style type="text/css">
+		body
+		{
+			background: black;
+		}
+		#outer
+		{
+			min-height: 150px;
+			width: 800px;
+			border: 10px groove aqua;
+			margin: 100px auto;
+			font-size: 120px;
+			text-align: center;
+			background: white;
+			font-family:Digital-7;
+		}
+	</style>
+</head>
+<body>
+	<div id="outer">TIME</div>
+
+	<script>
+		var demo=()=>
+		{
+			var d=new Date()
+			var x=d.toLocaleTimeString()
+			document.querySelector('div').innerHTML=x
+		}
+		window.setInterval(demo,1000)
+	</script>
+
+
+</body>
+</html>

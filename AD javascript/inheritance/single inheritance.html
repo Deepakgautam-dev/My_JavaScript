@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		class parent{   // parent / Base Class
+			method1()
+			{
+				console.log('Hello i am from method 1 parent in parent class')
+			}
+		}
+		class child extends parent{   // child / Derived class
+			method2()
+			{
+				console.log(' method 2  child class')
+			}
+		}
+		 var obj=new child()
+		 obj.method2()
+		 obj.method1()
+	</script>
+
+</body>
+</html>

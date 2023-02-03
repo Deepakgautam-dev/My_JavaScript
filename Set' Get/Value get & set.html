@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>task</title>
+</head>
+<body>
+	
+	<input id="a" type="text" placeholder="Enter Your Name" name=""><br/><br/>
+	<input id="b" type="text" placeholder="Enter Your Number" name=""><br/><br/>
+	<input id="c" type="text" placeholder="Enter Your Email" name=""><br/><br/>
+	<textarea id="d" rows="2" placeholder="Enter Message.."></textarea><br/><br/>
+	<button onclick="demo()">SAVE</button>
+	<br/><hr/>
+   
+    <div>
+    <div id="printer">
+	<p class="opt1"></p>
+	<p class="opt2"></p>
+	<p class="opt3"></p>
+	<p class="opt4"></p>
+    </div>
+    <button id="non" style="display: none;" onclick="demo1()">Print</button>
+    </div>
+
+	<script type="text/javascript">
+		var demo=()=>
+		{
+			var val1=document.querySelector("#a").value
+			var val2=document.querySelector("#b").value
+			var val3=document.querySelector("#c").value
+			var val4=document.querySelector("#d").value
+		
+
+            document.querySelector(".opt1").innerText=val1
+			document.querySelector(".opt2").innerText=val2
+            document.querySelector(".opt3").innerText=val3
+            document.querySelector(".opt4").innerText=val4
+
+
+			document.querySelector('#non').style.display="block"
+
+		}
+
+		var demo1=()=>
+		{
+			var final=document.querySelector('#printer').innerHTML
+			document.body.innerHTML=final
+			window.print()
+		}
+	</script>
+
+</body>
+</html>

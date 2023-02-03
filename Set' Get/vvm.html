@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>task</title>
+	<style type="text/css">
+		#outer
+		{
+			max-width: 800px;
+			min-height: 600px;
+			//background: aqua;
+			margin: 0 auto;
+		}
+		.box
+		{
+			width: 300px;
+			min-height: 600px;
+			float: left;
+			box-sizing: border-box;
+			border: 2px solid black;
+			padding: 20px;
+		}
+		.box1
+		{
+			width: 500px;
+			min-height: 600px;
+			float: left;
+			box-sizing: border-box;
+			border: 2px solid red;
+			padding: 20px;
+		}
+		.box input
+		{
+			width: 95%;
+			height: 30px;
+			padding-left: 10px;
+			margin: 8px 0px;
+		}
+		.box1 button
+		{
+			margin-right: 5px;
+		}
+		.box1 input
+		{
+			margin: 5px 0;
+			height: 30px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="outer">
+		<div class="box">
+			
+			<input type="text" name="" id="k" placeholder="Enter your Name " required><br>
+			<input type="email" name="" id="l" placeholder="Enter your Email " required><br>
+			<input type="password" name="" id="m" placeholder="Enter your Password " required><br>
+			<input type="text" name="" id="n" placeholder="Enter your Address " required><br>
+			<button onclick="demo()">Click Me..</button>
+			
+		<br/><br>
+
+
+		<h2>Your Details</h2>
+		<p id="a"></p>
+		<p id="b"></p>
+		<p id="c"></p>
+		<p id="d"></p>
+
+		</div>
+
+		<div class="box1">
+			<input type="text" id="get1" placeholder="Enter your Name">
+			<input type="text" id="set1" placeholder="Set value"><br>
+
+			<input type="password" id="get2" placeholder="Enter your Password">
+			<input type="text" id="set2" placeholder="Set value"><br>
+
+			<input type="email" id="get3" placeholder="Enter your Email">
+			<input type="text" id="set3" placeholder="Set value"><br>
+
+			<input type="text" id="get4" placeholder="Enter your Father Name">
+			<input type="text" id="set4" placeholder="Set value"><br>
+
+			<input type="text" id="get5" placeholder="Enter your Village Name">
+			<input type="text" id="set5" placeholder="Set value"><br>
+
+			<input type="text" id="get6" placeholder="Enter your Mobile Number">
+			<input type="text" id="set6" placeholder="Set value"><br>
+
+			<input type="text" id="get7" placeholder="Enter your Gender">
+			<input type="text" id="set7" placeholder="Set value"><br>
+
+			<textarea id="get8" placeholder="Enter Your Address"></textarea>
+			<textarea id="set8" placeholder="Set value"></textarea><br>
+
+			<button onclick="obc()">GET VALUE</button>
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		let demo=()=>
+		{
+			var val1 = document.getElementById('k').value
+			var val2 = document.getElementById('l').value
+			var val3 = document.getElementById('m').value
+			var val4= document.getElementById('n').value
+			var vala= document.getElementById('a')
+			var valb= document.getElementById('b')
+			var valc= document.getElementById('c')
+			var vald= document.getElementById('d')
+			vala.innerHTML=val1
+			valb.innerHTML=val2
+			valc.innerHTML=val3
+			vald.innerHTML=val4
+		}
+		let obc=()=>
+		{
+			var cng1=document.getElementById('get1').value
+			var png1=document.getElementById('set1')
+			png1.value=cng1
+			var cng2=document.getElementById('get2').value
+			var png2=document.getElementById('set2')
+			png2.value=cng2
+			var cng3=document.getElementById('get3').value
+			var png3=document.getElementById('set3')
+			png3.value=cng3
+			var cng4=document.getElementById('get4').value
+			var png4=document.getElementById('set4')
+			png4.value=cng4
+			var cng5=document.getElementById('get5').value
+			var png5=document.getElementById('set5')
+			png5.value=cng5
+			var cng6=document.getElementById('get6').value
+			var png6=document.getElementById('set6')
+			png6.value=cng6
+			var cng7=document.getElementById('get7').value
+			var png7=document.getElementById('set7')
+			png7.value=cng7
+			var cng8=document.getElementById('get8').value
+			var png8=document.getElementById('set8')
+			png8.value=cng8
+	
+		}
+		
+	</script>
+</body>
+</html>

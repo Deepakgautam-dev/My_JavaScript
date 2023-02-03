@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>pincode valid</title>
+</head>
+<body style="font-family: arial;">
+	PINCODE : 
+	<input type="text" onkeyup="demo(this)" placeholder="Enter your pincode">
+	<p>...</p>
+
+	<script type="text/javascript">
+		var demo=(x)=>
+		{
+			var opt=document.querySelector('p')
+			if(x.value.length==6)
+			{
+				opt.innerText="Pincode Is Valid"
+				opt.style.color='green'
+			}
+			else
+			{
+				opt.innerText='Invalid Pincode'
+				opt.style.color='red'
+			}
+		}
+	</script>
+
+</body>
+</html>

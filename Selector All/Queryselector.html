@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>querySelector</title>
+</head>
+<body>
+	<input type="text" name="">
+	<p>MESSAGE</p>
+	<input type="submit" value="Print" name="" onclick="demo()">
+
+
+
+	<script type="text/javascript">
+		let demo=()=>
+		{
+			var txt=document.querySelector("input").value
+			var para=document.querySelector("p")
+			para.innerText=txt
+		}
+	</script>
+
+</body>
+</html>

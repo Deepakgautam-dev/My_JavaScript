@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="checkbox" onchange="demo(this)"/>I am agree term's and condition<br><br>
+	<button disabled >save</button>
+
+	<script>
+		var btn=document.querySelector('button')
+		var demo=(x)=>
+		{
+			//alert(x.checked)
+			if(x.checked==true)
+			{
+				btn.removeAttribute("disabled")
+			}
+			else
+			{
+				btn.setAttribute("disabled","disabled")
+			}
+			
+		}
+	</script>
+
+</body>
+</html>

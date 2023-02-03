@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		class text{
+			constructor()
+			{
+				this.name="rohan"
+				this.age=23
+			}
+			showData()
+			{
+				console.log(`Name: ${this.name}, age : ${this.age}`)
+			}
+		}
+
+		class child extends text
+		{
+			constructor()
+			{
+				super()
+				this.salary=5000
+			}
+			showData1()
+			{
+				// super.showData()
+				// console.log(`salary : ${this.salary}`)
+				
+				console.log(`Name: ${this.name}, age : ${this.age},salary : ${this.salary}`)
+				
+			}
+		}
+
+		var obj=new child()
+		obj.showData1()
+	</script>
+
+</body>
+</html>

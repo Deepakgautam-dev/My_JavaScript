@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>onchange</title>
+</head>
+<body>
+	Apply For :<br/>
+	<select onchange="demo()">
+		<option>-Select course-</option>
+		<option>HTML</option>
+		<option>CSS</option>
+		<option>JS</option>
+		<option>C#</option>
+	</select><br/><br/>
+	Amount to pay :<br/>
+	<input type="text" id="ipt" name="">
+
+	
+	<script type="text/javascript">
+		var demo=()=>
+		{
+			var v =document.querySelector('select').value
+			var m =document.querySelector('#ipt')
+			if((v=='HTML')||(v=='CSS'))
+			{
+				m.value='500'
+			}
+			else if((v=='JS')||(v=='C#'))
+			{
+				m.value='1000'
+			}
+		}
+	</script>
+
+</body>
+</html>

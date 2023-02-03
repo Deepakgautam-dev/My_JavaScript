@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	var arr=["RAHUL","RAM","MOHAN","SHYAM","RAJ","ANTU"]
+	// var arr1=[]
+	// arr.forEach((item,index)=>{
+    //      if(item[0]=="R" && item.length%3==0)
+    //      {
+    //      	arr1.push(item)
+    //      }
+	// })
+	// document.write(arr1)
+
+
+	var arr1=arr.filter((item,index,arr)=>{
+		return ( item[0]="R" && item.length%3==0)
+	})
+	document.write(arr1)
+</script>

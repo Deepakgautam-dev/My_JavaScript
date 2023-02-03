@@ -1,0 +1,482 @@
+1. Let, var, const ( different )
+2. Loop and iteration
+3. Local storage and Internal storage
+4. Function parameter non parameter default
+5. import & Export
+6. higher order and call back function closer
+7. recursion
+8. memory trasing
+9. hip and stack
+10. event loop
+11. sincronus and asincronus
+12. dinamic memory location
+13. promicess and promicess all
+14. exeption handling
+15. context of arrow , normal, anonymous, iife (function)
+16. class
+17. object
+18. prototype function
+19. inheritance
+20. call back hell
+21. API handling using JS
+( register, login, change, password, image ) 
+
+Note:  no excuses ofter these topic if class attendence 
+
+
+what is function :
+=====================
+1. it is block of code executing some specific logic, repeatedly
+or 
+it is a block code which perform some specific Task. repeatedly functon is same as Achaar(pickel)
+
+why functions:
+====================
+
+1. let us consider, functionality add application/SW you need to verify otp verification.
+
+app-1
+app-2
+app-3
+app-4
+app-5
+
+Every app, feature is requirment.
+option 1=> same code otp verification copy+paste
+option 2=> make a function when required import, incluid, use them.
+
+Ans : options 2
+
+Due to modularity
+programming are of two types
+1. monolythic ( Procedural ): Every code in single file
+2.polythic : code at different files and one file can use another file if required.
+
+polylithic classifications:
+1. oops function : ( We make classes )
+2. functoinal based: ( We make functions)
+3. modular based
+
+
+function context:
+________________________________________________
+
+1. Colling context : using the function
+2. Definition context : making of function (definition of funcion)
+
+Order of context:
+
+1. definition context
+2. calling context
+
+function input and output
+_____________________
+
+Mathematical terms, what is function f(x)
+y=f(x)
+y=4x
+y=? when x=2 => y=8
+y depend on x
+
+
+function classifications on the basis of use
+
+1. predefines
+2. userdefined
+
+Note :: everypredefined is first time userdefiend
+printf() => predefiend user but Dennis Ritchie => userdefined
+
+Eg: servicing => Already person => so this he know how to work
+
+No Argument No Return Type
+1. calling
+Void()
+sayHello()
+
+1.collinng
+
+void()
+sayHello()
+
+definition context
+
+function sayHello()
+{
+console.log("say hello")
+}
+
+no argument but return types
+
+Definiton context:
+function demo()
+{
+var a=10;
+return a;
+}
+
+
+calling context :
+
+var x=demo()
+console.log(x)
+
+===========================================================
+With argument noo return type
+definition context :
+
+function demo(x)
+{
+console.log(x)
+}
+
+calling context:
+ 
+demo(10)
+or demo("mern Stack");
+or demo([10,23,46,34])
+
+With argument and return type:
+
+definition :
+
+function demo(a,b){
+var c=a+b;
+return c;
+}
+
+calling
+===========
+
+var result = demo(10,20);
+
+
+Local scope and  global scope
+========================================
+Scope means: it the region ,Area upto which value of a variable, function,method, object can be obtained.
+
+it is part/block of code upto which value of a variable, method, function, obj can be found.
+var a=20;
+
+function demo()
+{
+	console.log("inside local scope of function a=",a)
+	console.log("inside local scope of function b=",b)
+}
+demo()
+	console.log("outside global scope of function a=",a)
+	console.log("outside global scope of function a=",a)
+
+
+
+
+
+=====================================================
+var a=20
+undefined
+window.a
+20
+console.log(this)
+VM177:1 Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+this.a
+20
+
+===================================
+
+this means current Block scope
+
+
+Qustion
+============
+window.a==a
+true
+this.a==a
+true
+a==window.a==this.a
+false
+
+
+type of this 
+=====================
+global object : scope type : object
+
+typeof(this)
+'object'
+typeof(window)
+'object'
+typeof(null)
+'object'
+
+Note "" Null is object of global Scope
+Note :: undefined is a string datatype
+
+
+
+Arrow function:
+================================
+
+1. ES6 (Ecma 6 version of javascript) : Europeann computer matufacturing association
+
+var b=()=>{2+2}
+console.log(b())
+VM1167:2 undefined
+undefined
+var b=()=>{return 2+2}
+console.log(b())
+VM1192:2 4
+undefined
+var b=()=>{return 2+2}
+console.log(b)
+VM1208:2 ()=>{return 2+2}
+undefined
+
+
+
+Difference B/w arrow function Normal Function
+=========================================================
+
+1. normal function points to the different scope of the order function when referred with.
+
+for exp:
+========
+
+function demo()
+{
+	console.log(this);  // point other functon like setInterval
+}
+
+
+var demo=()=>
+{
+	console.log(this); // point to some object as earlier => Global Empty
+}
+
+
+
+Anonymous function are called as inline functions:
+======================================================
+
+and they do not  have a name, they can not be called directly. rather than  they are assigned to a variable and that variable used as a reference.
+
+
+function demo(){
+	console.log(" this is anonymus function")
+}
+
+demo();
+
+
+y=function()
+{
+	console.log("demo function calling")
+}
+
+y()  // function calling
+
+
+what is grouping operator
+==============================
+
+(function definition)();
+
+this is called IIFE : immediatly invoked (calling) function Execution
+
+()()=> couple operator or grouping Operator.
+(definiton)(calling)
+
+
+
+25/12/2022
+=======================
+
+Storage in the Browser
+==============================
+consider a program, having few a variables, with some data, then data here will have a scope till , the vm(virtual machine is running)
+
+var name="deepak";
+console.log(name);
+
+C language:
+===================
+int a;
+printf("Enter the vakue of a :");
+scanf("%d",&a);
+printf("value of a = %d",a)
+
+in order to make data permanent we need some kind storage machanism data we can storage today use them later on, for analysis, reporting,and future scope
+
+
+
+classificaiton of data
+
+1.
+Data : any information that can be stored data.
+exp: ram@gmail.com, 8299502081
+
+Note : data depends on use case
+
+
+
+Classificaton is given below
+1. File system
+      (a) txt : (html, json, .txt file)
+      (b) binary  : (audio,video,excel, image, BSON ....)
+
+      limited data
+2. data store in form excels.
+  1. 1 lack rows.
+     200 crore CSV.
+
+
+3. Database Management System :
+   sensitive data, data security, data transaction, Bandwith data change, Datebase Managenment system
+
+4.Data structure :
+  Large Amount of data, Organise
+
+5.Date ware hoursing:
+  large amount of data, in physical device.
+
+6. Big data (3V) or cloud
+
+Data storage in web development
+============================================
+1. Client side data Storage
+   1. cookie
+   2. IndexDB
+   3. localStorage
+   4. cache memory
+   5. webSql
+   Browser > ctrl+shift+i (dev tool) >
+   Element/console/source/ Application/ network
+    DOM      JS     cdn     storage      Api/Ajex/ Webservice
+
+2. Server side data Storage
+   1. Session
+   2. cloud Database (mongodb, oracle, redis)
+
+
+
+localStorage:>
+====================
+
+it is permanent data storage, it will will remain till browser remain
+
+Form of DataStructure :> Array of object
+
+
+
+Method of local storage:
+================================
+
+windows object => localstorage
+
+windows.localstorage()
+storage{key:value}
+
+std=[
+{name:"ravi",roll:1001,class:"12th"}
+{name:"ram",roll:1002,class:"10th"}
+{name:"Shyam",roll:1003,class:"12th"}
+]
+
+How to set the data local storage :
+============================================
+
+window.localStorage.setItem('std_data',std);
+
+problem:
+============
+std_data : [object,object]
+localStorage only accept in string formate
+
+
+
+Encoding(Serialization) and Decoding (De serialization)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+change original data to another formate : Encoding(serialization) getting back another form of data to original form is called as decoding (De Serialisization)
+
+typeof(Std)=>object
+localString=>String
+
+name:"ravi"
+
+How to convert object into String
+=========================================
+
+Array of object : JSON Object  => input
+String : JSON String => output
+
+JSON.stringify()
+
+How to convert String into object
+=========================================
+
+Array of object : JSON Object => output
+String : JSON String => input
+
+JSON.parse()
+
+How to set data in local storage using Encoding
+========================================================
+
+window.localStorage.setitem('std_data',JSON.stringify(Std))
+
+How to set data in local storage using decoding
+========================================================
+window.localStorage.getitem('std_data')
+type(data)=> string
+
+window.localStorage.setitem('std_data',JSON.stringify(Std))
+typeof(data) => object
+
+
+How to remove item or data
+=============================
+window.localStorage.removeItem('key');
+
+How to remove value from a key
+======================================
+window.localStorage.setItem('key',null);
+
+How to remove all data
+===========================
+
+window.localStorage.clear();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var str=[{name:"deepak",age:23},{name:"vivek",age:67},{name:"suneel",age:32}];
+window.localStorage.setItem('data',str);
+window.localStorage.setItem('data',JSON.stringify(str));

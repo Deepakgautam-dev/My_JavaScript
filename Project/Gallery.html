@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>gallery</title>
+	<style type="text/css">
+		#outer
+		{
+			width: 1300px;
+			height: 500px;
+			background:;
+			margin: 20px auto;
+		}
+		#left
+		{
+			width: 800px;
+			height: 100%;
+			background: ;
+			float: left;
+		}
+		#right
+		{
+			width: 500px;
+			height: 100%;
+			background:;
+			float: right;
+			padding-top: 90px;
+			box-sizing: border-box;
+		}
+		#right img
+		{
+			width: 150px;
+			margin: 6px;
+			box-shadow: 0px 0px 1px 3px #FC6E51;
+			
+		}
+		#right img:hover
+		{
+			transform: scale(1.1);
+		}
+	</style>
+</head>
+<body>
+	<div id="outer">
+		<div id="left">
+			<center><img src="../img3.jpg" style="width:700px; margin-top: 10px; box-shadow: 0px 0px 1px 3px #E9573F;" id="imag" /></center>
+		</div>
+		<div id="right">
+			<img src="../img2.jpg" onmouseover="demo(this)">
+			<img src="../img3.jpg" onmouseover="demo(this)">
+			<img src="../slid2.jpg" onmouseover="demo(this)"><br/><br/>
+			<img src="../img4.jpg" onmouseover="demo(this)">
+			<img src="../img2.jpg" onmouseover="demo(this)">
+			<img src="../slid3.jpg" onmouseover="demo(this)">
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		var demo=(x)=>
+		{
+			
+			var lm=document.querySelector('#imag')
+			lm.src=x.src
+		}
+	</script>
+
+</body>
+</html>

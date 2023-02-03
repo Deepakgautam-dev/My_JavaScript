@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>hide pass</title>
+</head>
+<body>
+	<input type="password" id="inp" name="">
+	<input type="button" value="SHOW" name="" id="btn" onclick="demo()">
+
+	<script type="text/javascript">
+		var  ram=document.querySelector('#inp')
+		var  ram1=document.querySelector('#btn')
+		let demo=()=>
+		{
+			if(ram.value!="")
+			{
+			if(ram1.value=='SHOW')
+			{
+				ram1.value="HIDE"
+				ram.type="text"
+			}
+			else
+			{
+				ram1.value="SHOW"
+				ram.type="password"
+			}
+			}
+			else
+			{
+				alert('Plz enter your password')
+			}
+
+		}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form Validation</title>
+	<style type="text/css">
+		form i{color: red; margin-left: 10px}
+	</style>
+</head>
+<body>
+	<form method="POST" onsubmit="return fvalidation()">
+		Name<br>
+		<input type="text" id="fname" placeholder="Enter your name"><i></i><br>
+		Email<br>
+		<input type="email" id="femail" placeholder="Enter your email"><i></i><br>
+		Phone<br>
+		<input type="phone" id="fphone" placeholder="Enter your number"><i></i><br>
+		Password<br>
+		<input type="Password" id="fpass" placeholder="Enter Password"><i></i><br>
+		Confirm Password<br>
+		<input type="Password" id="fcpass" placeholder="Enter confirm Password"><i></i><br>
+		File upload<br>
+		<input type="file" id="ffile" value=""><i></i><br><br><br>
+        <input type="submit" name="" value="submit">
+	</form>
+
+
+	<script type="text/javascript">
+		var one=document.querySelector('#fname')
+		var two=document.querySelector('#femail')
+		var three=document.querySelector('#fphone')
+		var four=document.querySelector('#fpass')
+		var five=document.querySelector('#fcpass')
+		var six=document.querySelector('#ffile')
+		var i =document.getElementsByTagName('i')
+
+		function fvalidation()
+		{
+			event.preventDefault()
+			
+
+			
+			// name
+			if(one.value.length=="")
+			{
+				i[0].innerText="*this field is empty"
+			}
+			else if(one.value.length<3)
+			{
+				i[0].innerText="*name length is short"
+			}
+			else
+			{
+				i[0].innerText=""
+			}
+
+
+
+
+			// email
+			var regex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+			if(two.value.length=="")
+			{
+				i[1].innerText="*this field is empty"
+			}
+			else if(two.value.match(regex))
+			{
+				i[1].innerText=""
+			}
+			else
+			{
+				i[1].innerText="*invalid email id"
+			}
+
+
+
+			// phone
+
+			var reg=/^[6-9]\d{9}$/gi
+			if(three.value.length=="")
+			{
+				i[2].innerText="*this field is empty"
+			}
+			else if(three.value.match(reg))
+			{
+				i[2].innerText=""
+			}
+			else
+			{
+				i[2].innerText="*invalid phone number"
+			}
+
+			// pass
+
+			var reg1 =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
+			if(four.value.length=="")
+			{
+				i[3].innerText="*this field is empty"
+			}
+			else if(four.value.match(reg1))
+			{
+				i[3].innerText=""
+			}
+			else
+			{
+				i[3].innerText="*invalid password"
+			}
+
+			// cpass
+
+			if(five.value.length=="")
+			{
+				i[4].innerText="*this field is empty"
+			}
+			else if(four.value==five.value)
+			{
+				i[4].innerText=""
+			}
+			else
+			{
+				i[4].innerText="*Miss match password"
+			}
+            
+
+            // image
+            if(six.value.length=="")
+			{
+				i[5].innerText="*Select file"
+			}
+			else if(six.value.length!="")
+			{
+            var extension=six.value.split('.').pop().toLowerCase()
+            var imgarr= new Array("png","jpg","jpeg")
+
+            for(var j=0; j<imgarr.length; j++)
+            {
+            	if(imgarr[j]==extension)
+            	{
+            		i[5].innerText=""
+            		break;
+            	}
+            	else
+				{
+					i[5].innerText="*Select file jpg, jpeg, png"
+				}
+
+            }
+            }
+            
+			
+
+
+			return false;
+		}
+
+
+	</script>
+
+</body>
+</html>

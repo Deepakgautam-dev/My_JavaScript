@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		class test{
+			method(x)
+			{
+				console(x)
+			}
+			method(x,y)  // method over loading
+			{
+				console.log(x+" "+y)
+			}
+		}
+
+		var obj=new test()
+		obj.method(12)
+		obj.method(12,45)
+	</script>
+
+</body>
+</html>

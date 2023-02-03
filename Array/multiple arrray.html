@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>dropdown</title>
+</head>
+<body>
+	<button onclick="demo()">CLICk ME</button>
+	<p></p>
+
+	<script>
+		let demo=()=>
+		{
+			var arr=['Summer tranning','Winter Tranning','Apperentship']
+			var c=['red','aqua','orange']
+			a=0
+			var res="<select>"
+			for(var i of arr)
+			{
+				res=res+"<option style='color:"+c[a]+"'>"+i+"</option>"
+				a++;
+			}
+			res=res+"</select>"
+			document.querySelector("p").innerHTML=res;
+		}
+	</script>
+
+</body>
+</html>

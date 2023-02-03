@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>image</title>
+	<style type="text/css">
+		img
+		{
+			width: 250px;
+			float: left;
+			border: 2px solid black;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<img src="../slid2.jpg">
+	<img src="../slid3.jpg">
+	<img id="d" src="../img2.jpg">
+	<img src="../img3.jpg">
+	<button onclick="demo()">Click Me</button>
+
+	<script type="text/javascript">
+		var demo=()=>
+		{
+			//var img=document.images[0].src  // html collection
+			//var img=document.images.item(2).src
+			//var img=document.images.item("d").src
+			var img=document.images.item("d").src="../img4.jpg"
+			alert(img)
+		}
+	</script>
+
+</body>
+</html>

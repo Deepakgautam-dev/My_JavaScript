@@ -1,0 +1,2516 @@
+
+web server : 
+client side : run web browser , web server se communication ki jarurat nahi hota
+html,css,js, jquery, bootstrap, reactjs,angularjs,vue JS et
+
+server side language: run web server, provide inviroment
+batabase
+
+Two type of language:
+statically: strictly type language
+dynamically: loosely type language
+
+javascript:
+
+created in may 1995
+
+
+way to write code of javascript
+______________________________________________________
+
+1. Internal JavaScript  
+<script>
+alert("Welcome to javascript");
+</script>
+
+2. External JavaScript
+
+console.log() =>
+______________________________________________________
+
+It is used to display output browser console.
+_______________
+
+<script>
+console.log("welcome to techpile");
+</script>
+
+Variable
+
+var = assign value multiple time + declare multiple time
+ES6: 
+_______________
+let = assign value multiple time + But not declare multiple time
+const = one time assign + one time declaration
+
+ECMA is a standerd to writing code
+______________________________________________________
+
+declaration of variable: var x;
+
+cancotination
+_______________
+var res= 10
+
+alert("result si :" +res)
+
+ES6 String literal
+alert(`result is : ${res} number ${x}`)
+
+Prompt()
+_______________
+
+=> prompt is used to take input from user on runtime
+=> Return function of prompt function is string
+=> prompt function is defined in window object
+=> windows object is primary object of javascript
+
+Two button
+++++++++++++++
+
+Ok=> value
+cancel=> Null
+===================================
+
+objectname.member
+
+object is collection of properties(variable) and methods (function)
+variable,function => member of object
+
+mamber of windows object
++++++++++++++++++++++++++++++++++++++++++
+
+prompt()
+alert()
+confirm()
+location=> properties
+open()
+play()
+pause()
+setInterval()
+clearInterval()
+setTimeout()
+etc.
+
++++++++++++++++++++++++++++++++++++++++++++
+
+Syntax prompt
+
+window.prompt('fieldName','placeholder')
+
+var name = window.prompt('Name','Enter your name')
+
+Type Conversion
++++++++++++++++++++++++++++++++++++
+
+number :
++++++++++++++++++++++
+var num1 = parseInt(prompt('Enter first number'))
+var num2 = parseInt(prompt('Enter second number'))
+
+var num1 =prompt('Enter first number')
+var num2 =prompt('Enter second number')
+var sum = Number(num1)+Number(num2)
+alert(typeof sum)
+
+
+Style dacument with javascript
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+1. getElementById()
+2. getElementsByTageName()
+3. getElementsByClassName()
+4. querySelector()
+5. querySelectorAll()
+
+1. getElementById() : function is used to select html element on the basis of html Id.
+2. getElementsByTageName() : function is defined in dacument object.
+ => dacument object is the build in object of DOM.
+ => return type of getElementById  function is corrent object.
+
+ Syntax
+ ++++++++++++++
+
+ document.getElementById("Id of html Element")
+
+ Exp: 
+
+ <h1 id="txt">Welcome to World!</h1>
+
+  document.getElementById("txt")
+
+Step to apply css with javascript:
++++++++++++++++++++++++++++++++++++++++++++++++
+
+document.getElementById("txt").style.color='red'
+
+
+
+function:
++++++++++++++++
+
+
+Old
+++++++++++++
+
+		function myfun()
+		{
+		var hed=document.getElementById("txt")
+		hed.style.color="red"
+		hed.style.background="yellow"
+		hed.style.border="10px solid red"
+		}
+
+New
++++++++++++++++
+
+var myfun=()=>
+{
+	statement
+	statement
+	statement
+	statement
+}
+
+Anonimus function / without name
+++++++++++++++++++++++++++++++++++++++
+
+function()
+{
+	statement
+	statement
+	statement
+	statement
+}
+
+function(x,y)
+{
+	statement
+	statement
+	statement
+	statement
+}
+()=>
+{
+	statement
+	statement
+	statement
+}
+(x,y)=>
+{
+	statement
+	statement
+	statement
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+<input type="text"/>   // techpile
+<input type="button" value="Get value"/>
+
+Value
+==============
+
+=> value property is useds to set/get value of selected from control.(input, textarea, button select, datalist, etc)
+
+=>Return type value property is string
+
+Syntax get
++++++++++++++++++++++
+
+HTMLOBJECT.VALUE
+var x= document.getElementById("idofformcontrol").value//
+
+Exa:
+=======
+
+<input type="text"/>   // techpile
+<input type="button" value="Get value"/>
+
+
+Syntax Set
++++++++++++++++++++++
+
+objectname.value="rama"
+=> Return value string
+
+
+QuerySelector
+**************************************************
+
+=> Queryselector is used to select first maches of element of given selector (ID,class,tag,group)
+=> It is defined in document object.
+
+
+
+Syntax
++++++++++++++++
+
+document.querySelector("CSSSelector")
+
+Exa:
+
+<p>HTML</p>
+<p>CSS</p>
+<p>JS</p>
+
+<input class="txt" type="text"/>
+<input class="txt" type="text"/>
+
+document.querySelector("p")  // First para
+document.querySelector(".txt") // first input
+document.querySelector(".txt").value // first input
+
+
+
+innerText
+==========================
+
+<p id="p1">TECHPILE</p>
+<p id="p2">HCL</p>
+get
+==============
+
+var x=document.querySelector("#p1").innerText
+
+Set
+==============
+
+document.querySelector("#p2").innerHTML=x
+
+<img src="" id="" />
+<img src="" id=""/>
+
+
+Confirm Box
+++++++++++++++++++++++++++++
+
+=> Confirm box is used to take user confirmation. it has two buttons
+
+cancel => false
+ok => true.
+=> Confirm is defiend is windows object
+
+Syntax
++++++++++++++++++++++
+window.confirm()
+confirm()
+
+
+
+Function setInterval
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+=> senInterval function is used to execute a group of statement for every given time interval
+=> setInterval function is defined in windows.
+
+Exp:
+===============
+Syntax 1
++++++++++++++++
+
+window.setInterval(functionname, time in milisecond)
+setInterval(functionname, time in milisecond)
+
+setInterval("functionname()", time in millisecond)
+
+Function demo()
+{
+	alert('OK')
+}
+
+setInterval("demo()",5000)
++++++++++++++++++++++++++++++++++++++++
+
+
+setTimeout()
+================
+
+=>setTimeout function is used execute one a group of statement after given time interval.
+
+
+window.setTimeout(functionname, time in milisecond)
+setTimeout(functionname, time in milisecond)
+
+setTimeout("functionname()", time in millisecond)
+
+Function demo()
+{
+	alert('OK')
+}
+
+
+
+
+Array in javaScript
+++++++++++++++++++++++++++++++++++++++++
+
+In Javascript array is collection of heterogeneous data type element
+
+=> indexing of  array is starts from 0 and last index is n 1 where n is lenght of array.
+
+Syntax 1
+=========================
+ var arrayName=[item1, item2,item3.............itemN]
+
+ exp:
+
+ var EmpInFo=['Ram',30,2898.344, true]
+
+ How to access element of array
+ +++++++++++++++++++++++++++++++++++++++++++
+
+ EmpInFo[0] // Ram
+ EmpInFo[1] // 30
+ EmpInFo[2] // 2898.344
+ EmpInFo[3] // true
+
+ ============================================
+
+ Syntax 2
+ ==============================
+ var arrayname=new Array(item1,item2, item3, item4.......itemN)
+
+ var courseList = new Array("HTML","CSS","JAVASCRIPT","JQUERY")
+
+
+
+<script type="text/javascript">
+	 var courseList = new Array("HTML","CSS","JAVASCRIPT","JQUERY","BOOTSTRAP","REACT JA")
+	 for(var i=0; i<courseList.length; i++)
+	 {
+	 	alert(courseList[i])
+	 }
+</script>
+
+
+
+===============================
+
+for ...............in loop
+for ...............of loop
+
+var arrName=new Array(item1,item2,item3,item4.........itemN)
+
+alert("OK")
+
+If we want to execute a group of statement for every element present on given colletion then we have to for.. in or for .. of loop
+
+
+for ...of loop
++++++++++++++++++++++++++++++++++
+
+syntax:
+============
+
+name="RAM"
+for (var variable of collection)
+{
+	Statemnt...
+	Statemnt...
+	Statemnt...
+	Statemnt...
+}
+
+
+Function in javascript
+++++++++++++++++++++++++++++++++++++++
+
+=> function is block of re usable code which used to perform particular task.
+=> the block of code will be executed when user calls(invoke) it.
+
+
+Type of function
+=======================
+
+1. Build-in function  // pre-defined function
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+=> the function which are define in system client
+are knone as build-in function
+
+Exa:
+------------
+setInterval 
+setTimeout
+alert()
+prompt()
+write()
+etc.
+
+User defined functon(UDF)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+=> The function  which are defined by user based on our business requirment are knone as UDF.
+
+Syntax
+===========
+
+function functionname()=>parenthsis
+{
+	statement...
+	statement...
+	statement...
+}
+
+Calling of function
++++++++++++++++++++++++++++++
+
+functionname()  // onload  =>
+onload="functionname()"
+
+
+
+In javascript multiple Event are used to handle calling of function
+
+
+onclick event
+ondbclick
+onfocus
+onblur
+onmouseover
+onmouseleve
+onkeypress
+onkeyup
+etc.
+
+
+Es6 => 2015 in a standerd 
++++++++++++++++++++
+
+Arrow function in ES6
++++++++++++++++++++++++++
+
+var demo=()=>   // arrow function  // without parameter
+{
+	statement..
+}
+
+
+Function with parameter
+++++++++++++++++++++++++++++
+
+Exp:
+function demo(parameter1, parameter2,....................prarmeterN)
+{
+	statement..
+	statement..
+}
+
+
+Parameter
+================
+
+=> Parameter provides input to the function.
+=> At time of calling of function compulsory we have to provide value to that parameter otherwise we will get error.
+
+ function demo(x,y)     // Formal argument
+ {
+ alert(`sum is : ${x+y}`)
+ }
+
+ demo(10,30)  //10,30 actual argument
+
+
+
+ Arrow function with function
+ +++++++++++++++++++++++++++++++++
+
+let demo=(x,y)=>     // Formal argument
+ {
+ alert(`sum is : ${x+y}`)
+ }
+
+ demo(10,30)  //10,30 actual argument
+
+ =========================================================================
+
+
+
+ function with default parameter
+
+ +++++++++++++++++++++++++++++++++++
+
+
+let demo=(x=20,y=30)=>     // x,y formal
+ {
+ alert(`sum is : ${x+y}`)
+ }
+
+ demo() // 50
+ demo(100)  // 130
+ demo(100,200) // 300
+ demo(,60)  // 
+
+
+
+ Rest operator
+ +++++++++++++++++++++++++
+
+
+let demo=(...x)=>     // ...x rest operator
+ {
+ alert(x)
+ }
+
+ demo(10)              // x=[10]
+ demo(30,80)           // x=[30,80]
+ demo(100,20,50)       // x=[100,20,50]
+ demo(10,20,40,60)     // x=[10,20,40,60]
+
+
+<script type="text/javascript">
+let demo=(...x)=>     // ...x rest operator
+ {
+ var sum =0
+ for(var a of x)
+ {
+    sum=sum+a
+ }
+ document.write(`sum is : ${sum} <br/>`)
+ }
+
+ demo(10)              // x=[10]
+ demo(30,80)           // x=[30,80]
+ demo(100,20,50)       // x=[100,20,50]
+ demo(10,20,40,60)     // x=[10,20,40,60]
+</script>
+
+
+============================================================================
+
+this keyword
+++++++++++++++++
+
+this keyword is used to select  current object of HTML element.
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<input type="button" value="+" onclick="demo(this)">
+	<input type="button" value="*" onclick="demo(this)">
+	<input type="button" value="/" onclick="demo(this)">
+	<input type="button" value="-" onclick="demo(this)">
+
+
+	<script type="text/javascript">
+		let demo=(x)=>
+		{
+			alert(x.value)
+		}
+	</script>
+
+</body>
+</html>
+
+
+
+Anonymous function
++++++++++++++++++++++++++++++++++++
+
+The function which have no any name is known as anonymous functon
+
+Syntax
+==========
+function()
+{
+	statement...
+	statement...
+	statement...
+}
+
+************************************************
+callback => function within function
+*******************************************
+
+
+function demo()
+{
+	alert('OK')
+}
+window.setInterval(demo,5000)
+
+
+<script>
+window.setInterval(function(){ alert("OK")},5000)
+</script>
+
+Anonymouse Arrow Function
+===============================
+
+funciton demo=()=>
+{
+	statemenet..
+	statemenet..
+	statemenet..
+}
+
+()=>
+{
+	statement..
+	statement..
+	statement..
+}
+
+window.setInterval(()=>{alert("OK")},5000)
+
+
+03/12/2022
++++++++++++++++++++++++++++++++++++++++++++++++++++
+onkeyup
+onkeypress
+onfocus
+onblur
+
+
+
+ForEach functiion()
+================================
+
+=> forEach function is used to execute a group of statement for every element present in array.
+=> forEach will not execute if array is empty.
+
+
+Syntax
+++++++++++++
+
+arr=["HTML","CSS","JS","JSQUERY"]
+
+arr.forEach(data,i,arr) =>
+{
+	statement..
+}
+......
+
+
+
+Date object:
+++++++++++++++++++++
+
+=> date is a object providing some methods related date and time
+
+Syntax:
+=========
+
+var d=new Date()
+
+d.getHours()   => 1 to 24
+d.getMinutes() => 0 to 59
+d.getSecond()  => 0 to 59
+d.getMilliseconds()     => 0 to 999
+d.getDate()             => 05
+d.getMonth()            => 0 to 11
+d.FullYear()            => 2022
+d.getDay()              => 0 to 6
+d.toLocaleTimeString()  => 11:40 AM/PM
+d.toLocaleDateString()  => mm/dd/yyyy => 12/05/2022
+etc...
+
+
+
+clearInterval()
+=======================
+
+clearInterval function is used to clear functionality of setInterval
+
+
+function demo()
+{
+	statement
+}
+
+var a=window.setaInterval(demo,1000)
+
+
+window.clearInterval(a)
+
+06/12/2022
+
+HTML collection:
+____________________________________________________________________
+
+html collection id just like array but element of HTMLCollection can be access by index
+
+item
+length
+namedItem
+
+NodeList
+____________________________________________________________________
+
+Node List is just like HTML Collection but it's has own function like
+
+entries, values, forEach, key, Item
+
+
+***
+getElementsByClassName
+____________________________________________________________________
+
+getElementsByClassName is used to return HTML Collection with specified className.
+
+<p class="abc">PARA1</p>
+<p class="abc">PARA2</p>
+<p class="abc">PARA3</p>
+<p class="abc">PARA4</p>
+
+
+getElementsByClassName
+____________________________________________________________________
+
+getElementByTngName function is used to return HTMLCollection with specified tagName
+
+<p class="abc">PARA1</p>
+<p id="a" class="abc">PARA2</p>
+<p class="abc">PARA3</p>
+<p id="box" class="abc">PARA4</p>
+
+var x=document.getElementsTagName("p")// x=object collection
+var x=document.getElementsTagName("p").namedItem("box").innerText
+alert("x")  // para 4
+
+
+Return HTML Collection
+_________________________________________________________________
+
+document.title
+document.images
+document.head
+document.body
+
+location
+_________________________________________________________________
+location properties is used to redirect location
+
+=> location is defined in windows object
+Window.location="https://techpile.in/st"
+
+open()
+
+open function is used to open URl on new tab or new window.
+window.open("URL","blank","height=value,width=value")
+
+Exp:
+
+window.open("https://www.techpile.in","_blank","height=600px,width=700px")
+
+
+print()
+_________________________________________________________________
+
+The print() method prints the contents of the current window.
+
+The print() method opens the Print Dialog Box, which lets the user to select preferred printing options
+
+Parameters => none 
+Return Value:	No return value
+
+Syntax
+=================
+window.print()
+
+
+querySelecterAll()
+======================
+
+=>querySelectorAll return  nodeList with specified selector Name.
+
+<p>HTML</p>
+<p id="b">CSS</p>
+<p class="a">JS</p>
+<p class="a">JQUERY</p>
+
+document.querySelectorAll('p')
+document.querySelectorAll('#b')
+document.querySelectorAll('.a')
+
+,var x=document.querySelectorAll('p')  // Nodelist
+
+
+getElementsByName
+========================
+
+=> getElementByName is uesd to return nodeList with  specified name
+
+<p name="a">Para1</p>
+<p name="b">Para1</p>
+<p name="a">Para1</p>
+<p name="a">Para1</p>
+<p name="b">Para1</p>
+
+
+document.getElementsByName('a') // p1, p3, p4
+
+
+setAttribute
+_____________________________
+
+function is used to set attribute selected HTML Element
+
+Syntax:
+============
+var element=document.querySelector("selector")
+element.setAttribute("attributename","value")
+
+
+getAttribute
+_____________________________
+
+it is used to get attribute value of selected HTML element.
+
+<img src="../img2.jpg"/>
+
+document.querySelector("img").getAttribute("src")
+
+removeAttribute
+_____________________________
+
+
+hasAttribute
+_____________________________
+
+It's return true of specified attribute exist selected HTML element otherwise its return false
+
+<h2 id="box">HTML</h2>
+<script>
+document.querySelector("h2").hasAttribute("class")    // flase
+document.querySelector("h2").hasAttribute("id")      // true
+</script>
+
+hasAttributes
+_____________________________
+
+=> It returns false if selected HTML element have no attribute otherwise it returns true
+
+   <h2 id="box">Hello World</h2>
+	<h3>Hello World</h3>
+
+	<script type="text/javascript">
+		var x=document.querySelector("h2").hasAttributes() // true
+		var y=document.querySelector("h3").hasAttributes() // false
+		alert(x)
+		alert(y)
+	</script>
+
+
+
+
+Math object
+++++++++++++++++++++++++++++++++++++++
+ math is a object provoiding  some property (variable) and method (function) related to mathematical operation.
+
+Constant value
+===============
+1. PI
+2. LN2 => provide log ritham value of 2 base e
+3. LN10 => provide log ritham value of 10 base e
+
+
+floor ()=> floor function is used to return lowest integer value of given decimal value  
+alert(Math.floor(12.89))  // 12
+random() => is used to return random number between 0(including) to 1(excludeing)
+value : (0 to 0.99)
+Exp: alert(Math.random())  // 0.2103110671116728
+
+ceil() alert(Math.ceil(12.89))  // 13
+round()  alert(Math.round(7.6))  // 8,  alert(Math.round(7.3))  // 7
+min() =>   min(1,2,3,4,5,6,44,77,45)=> 1
+max() =>   min(1,2,3,4,5,6,44,77,45)=> 77
+sqrt() => sqrt(16) => 4 negative not acceptable
+cbrt() => cbrt(27) => 3 negative acceptable
+rand() => 0 to 0.99
+pow() => x to the y pow (2,3)=>2*2*2=8 (2**3=> exponent operator)
+log(10) => it is used to find logarithem value
+etc.
+
+
+var str ="techpile"
+
+
+
+Trim() function
+==============================
+
+=> Trim function is used to remove both side white space.
+
+var str=" DEEPAK "   // white space
+var str1="DEEPAK"
+
+str===str1 => false
+
+
+var str=str.trim() => " DEEPAK " => "DEEPAK"
+str===str1 => true
+
+
+
+addEventListner()
+================================
+
+=> it is used to add event to the selected HTML element. 
+=> It does not override old event
+
+element.addEventListner(Event, function, useCapture)
+
+Event => click,mouseover,dblclick, 
+function => create function, parameter, multiple
+useCapture => 1.bubbling => false, 2.capturring => true
+
+Exp:
+     element.addEventListner("click",demo)
+
+     function demo()
+     {
+     alert("OK")
+     }
+
+
+
+Contextmenu
+==================================
+
+contextmenu event executed when user right click on window.
+
+preventDefault()
+==================================
+
+=> preventDefault method is used to prevent(stop) default action.
+
+event.preventDefault()
+
+window.addEventListener("contextmenu", function(){alert("right click desabled here..")
+event.preventDefault()})
+
+
+
+copy event:
+===========================
+
+copy event executed when user select copy option keyboard/mouse
+
+window.addEventListener("copy",function(){alert("ok")})
+
+
+cut event:
+===========================
+
+cut event executed when user select copy option keyboard/mouse
+
+window.addEventListener("cut",function(){alert("ok")})
+
+
+past event:
+===========================
+
+past event executed when user select copy option keyboard/mouse
+
+window.addEventListener("past",function(){alert("ok")})
+
+String in js
+======================
+
+: IN javaScript string is collection character enclosed with single or double or backtique
+
+"RAM"
+'RAM'
+`RAM`
+
+Function of string in javastring
+++++++++++++++++++++++++++++++++++++++
+
+sclice
+============== " TECHPILE TECHNOLOGY "
+sclice function is used return a part of string based on start and end index.
+=> Here negative index is acceptable.
+syntax:
+===============
+var str="TECHPILE TECHNOLOGY"
+str.sclice(startIndex,endIndex) // not encluding end index (end-length)
+Exa:
+str.slice(2,5)  // CHP  // length = end-start //3=>(2,3,4 index)
+str.slice(-10,-5) // TECHN -5-(-10) //5
+str.slice(-10) // TECHNOLOGY
+str.slice(3)  // CHPILE TECHNOLOGY
+
+
+substring
+============== " TECHPILE TECHNOLOGY "
+substring function is used return a part of string based on start and end index.
+=> Here negative index is not acceptable.
+
+syntax:
+===============
+var str="TECHPILE TECHNOLOGY"
+str.substring(startIndex,endIndex) // not encluding end index (end-length)
+Exa:
+str.substring(2,5)  // CHP  // length = end-start //3=>(2,3,4 index)
+str.substring(3)  // CHPILE TECHNOLOGY
+
+substr
+================
+substr function is used to return a part of string of given string based on start and length
+ syntax:
+ =========
+
+ string.substr(startIndex,legth)
+
+ startIndex can be negative but length can't possible
+
+var str="MOHAN"
+alert(str.substr(1,3)) // OH
+
+charAt
+============================================
+this function is used to return charecter at specified
+=> index can't be negative  or greater than or equal to length of string.
+=========================================================================
+var str="TECHPILE TECHNOLOGY"
+alert(str[[0]]) //T
+alert(str[[1]]) //E
+alert(str.charAt(0))  // T
+alert(str.charAt(1))  // E
+alert(str.charAt(str.length-1))  // Y
+alert(str.charAt(str.length-2))  // G
+
+charCodeAt
+==================
+charCodeAt  function is used to return Unicode(ASCII value) value at specified index.
+=================================================
+
+ASCII  VALUE OF CHARECTER  // UNICODE VALUE
+
+ASCII stand for American standerd code for information interchange.
+
+A-Z  {65-90}
+a-z  {97-122}
+space  {32}
+0-9  {48-57}
+============
+
+var str="ABCabc0123"
+alert(str.charAt(0)) //A
+alert(str.charCodeAt(0)) //65
+alert(str.charCodeAt(3)) //97
+alert(str.charCodeAt(5)) //99
+alert(str.charCodeAt(str.length)) // Null
+
+
+indexin
+================================================
+
+
+
+
+
+indexOf
+================================================
+=> index function is used to  return index of first occurrence of charecter in a string.
+=> it returns -1 if charecter is not present in given string.
+
+Syntax:
+==========
+var str="TECHPILE technology"
+
+<script type="text/javascript">
+    var str="TECHPILE Technology"
+    var str1="TECHPILE TECHNOLOGY"
+    document.write(str.indexOf("T"))  //0
+    document.write(str.indexOf("Te"))  //9
+    document.write(str.indexOf("z"))  //-1
+    document.write("<br/>")
+    document.write(str1.indexOf("TECH"))  //0
+    document.write(str1.indexOf("TECH",4))  //9
+</script>
+
+
+lastIndexOf()
+==================
+lastIndexOf function is used to return index of last occurrence charecter in a given string
+=> it return 1 if chareter not present in given string
+
+<script>
+var str="Techpile Technology"
+alert(str.lastIndexOf("T")) //9
+alert(str.lastIndexOf("o")) //16
+</script>
+
+
+search()
+=========================
+search function is used to return index of first occurrence of ragular expression on string.
+
+=> By default it searches in case sensetive mode.
+=> if we want to search case-insensetive mode the we have to use i flag with regular expression.
+=> it returns -1 if regular expression is not present string.
+
+var str="Techpile"
+alert(str.indexOf("T"))  //0
+alert(str.indexOf("t"))  //-1
+alert(str.search("T"))  //0
+alert(str.search(/t/))  // Case-sensetive  //-1
+alert(str.search(/t/i))  // Case-insensetive //0
+
+
+
+
+
+toUpperCase()
+==================================================
+=> to convet string into uppercase letter
+
+Syntax
+=========
+var str="Techpile"
+str=str.toUpperCase()
+console.log(str)             // TECHPILE
+
+toLowerCase()
+=======================================================
+=> to convet string into lower letter
+
+Syntax
+=========
+var str="Techpile"
+str=str.toLowerCase()
+console.log(str)             // techpile
+
+
+trim()
+========================================================
+=> trim function is used to remove both side white space
+ 
+var str="  techpile  "
+document.write(str.length)  //12
+str=str.trim()
+document.write(str.length)  // 8
+document.write(str)   // techpile
+
+trimstart()
+==========================================================
+=> to remove left side white space of a string.
+
+var str="  techpile  "
+document.write(str.length)  //12
+str=str.trimStart()
+document.write(str.length)  // 10
+document.write(str)   // "techpile  "
+
+trimEnd()
+==========================================================
+=> to remove right side white space of a string.
+
+var str="  techpile  "
+document.write(str.length)  //12
+str=str.trimRight()
+document.write(str.length)  // 10
+document.write(str)   // "  techpile"
+
+
+padStart
+==========================================================
+=> pad function is used to add contant at beginning position of given string.
+
+Syntax
+======================
+
+var str="RAM"
+//str.padStart(length,"content")
+//length=> length of string after content added.
+var x=str.padStart(12,"SHYAM")
+
+padEnd()
+==========================================================
+=> pad function is used to add contant at Last position of given string.
+
+Syntax
+======================
+
+var str="RAM"
+//str.padEnd(length,"content")
+//length=> length of string after content added.
+var x=str.padEnd(5,"X")
+
+replace()
+=========================================================
+=> replace function is used to replace a part of string with new string
+=> By default it replace first matches element with new string
+=> if we want to replace all matches of string the we have to use global flag with regular expression.
+=> It dose not update original string
+Syntax:
+====================
+var str="Techpile Technology"
+str.replace(oldstring,newString)
+
+str.replace("tech","XYZ")  // ( Casesenstive mode)
+document.write(str)  // Techpile Technology
+
+str.replace("Tech","xyz") // xyzpile Technology ( Casesenstive mode)
+
+str.replace(/tech/g,"abc")  // abcpile abcnology   (g for global)
+str.replace(/tech/i,"abc")  // abcpile Technology  (i for case insenstive)(match first)
+str.replace(/tech/gi,"abc")  // abcpile abcnology  (i for case insenstive)
+
+
+replaceAll()
+===================================================
+=> replaceAll function is used to replace all matches of given string with new string
+=> if you want to ragular expression in replaceAll the compulsory we have to globle flag(g).
+
+	var str="Techpile Technology"
+	var a=str.replaceAll("Tech","abc")  //abcpile abcnology
+	var a=str.replaceAll(/tech/g,"abc")  //Techpile Technology
+	var a=str.replaceAll(/tech/ig,"abc")  //abcpile abcnology
+
+
+replaceStart()
+
+concat()
+==================================================
+=> concat function is used to merge multiple string in on string.
+
+var str1="Techpile"
+var str2="Technnology"
+var str3="PVT. LTD."
+
+var merge = str1.concat(str2,str3)
+document.write(merge)
+
+
+match()
+==================================================
+=> match function  is used to match a part of string in main string and return first element.
+=> if searches element is not present in main string then it return null.
+
+<script type="text/javascript">
+	var str="Techpile Technnology PVT. LTD."
+    var x=str.match("Tech")  //Tech
+    var x=str.match("tech")  // NULL
+    var x=str.match(/tech/i)  // Tech
+    var x=str.match(/tech/i)  // Tech, Tech
+    document.write(x)
+</script>
+
+
+
+includes()
+================================================
+
+=> includes function is used to check whether given string present in main string or not. 
+=> it return s true if given string is present in main string otherwise it returns false.
+
+var str="Techpile Technnology PVT. LTD."
+var x=str.includes("Tech")  // True
+document.write(x)
+
++++++++++++++
+split() +++++
++++++++++++++
+=> split function is used to split string based into array based on separator
+
+Syntax
+================================================
+str.split(separator)
+var str="Techpile Technnology PVT. LTD."
+var x=str.split("") //
+document.write(x)  //["Techpile","Technnology","PVT.","LTD."]
+=======================================================
+
+startsWith()
+===============================================
+=> startWith function is used to check whether main string starts with given string or not.
+=> it return true if main string starts with given string otherwise it returns false
+
+var str="Techpile Technology Pvt. Ltd"
+var x=str.startsWidth("Tech")  //true
+var x=str.startsWidth("ZXy")  //false
+
+
+
+endsWith() => upper oposite
+===============================================
+
+
+
+Array Functions
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+push()
+===========
+
+=> push function is used to add element at last index of array and return of updated array
+=> it updates original array
+
+Exp:
+=====
+
+var arr=["RAM","MOHAN","SOHAN"]
+var newarr=arr.push("DEEPAK")
+document.write(newarr)
+
+
+filter()
+======================
+
+=> filter function is used to filter items of array and return new array bassed on some condition
+=> filter function is not applicable for empty array.
+
+Exp:
+==========
+
+var arr=[]
+arr.filter(function)
+ function(currentItem, index,arr)
+ here index and arr is optional parameter.
+
+map()
+========
+
+=>if we want to add some functionality to every elements of arrray and generate new array the we have to map function.
+=> map function is not applicable for empty array
+=> it does not update original array.
+
+Syntax:
+==========
+
+arr.map(function)
+function(currentValue, intex, array)
+
+Exp:
+======
+
+<script type="text/javascript">
+	var arr=[3,4,5,6,7,8,9,10]
+	var arr2=arr1.map((item)=>{
+		return item*item
+	})
+	document.write(arr2)
+</script>
+
+
+pop function
+=================
+
+pop function is used to remove last element of an array and return removed element.
+
+arr=["ram","mohan","raj"]
+arr.pop()
+
+extension find
+======================
+abc.jpg
+abc.skff.png
+abc.mohan.jpg
+
+
+var a="abcd.png"
+var b=a.split(".")
+alert(b.pop())
+
+
+
+shift()
+==============
+
+shift function is used remove first element of  an array and return removed element
+
+var arr=[1,2,3,4,5,6,7]
+var a=arr.shift()
+alert(a) // 1
+alert(arr) // 2,3,4,5,6,7
+
+unshift()
+==============
+
+shift function is used to add an element array at begining position.
+
+=> it return length of updated array
+
+var arr=[1,2,3,4,5,6]
+var x=arr.unshift("12")
+alert(x) // 7
+alert(arr) //12,1,2,3,4,5,6
+
+
+delete()
+============================================================
+
+delete property is used to delete value of an array without index.
+
+var arr=["RAM","MHAN","SOHAN"]
+delete arr[0]
+alert(arr)
+alert(arr[0])  // undefined
+
+
+==============================================
+
+var str="TECHPILE TECHNOLOGY PVT LTD"
+var arr=str.split(" ") // "TECHPILE" "TECHNOLOGY" "PVT" "LTD"
+
+
+join()
+=========================
+=> join function is used to join element of array on the basis of separetor and return new string
+=> it does not update original array
+
+
+var arr=["RAM","MOHAN","SOHAN"]
+arr.join("||")  // RAMA||MOHAN||SOHAN
+========================================
+
+every()
+====================
+=> every function is used to check whether given condition satisfy all element of array or not 
+=> it returns true if all elements of array satisfy given condition otherwise it returns false.
+
+syntax
+=====================
+arr.every((iten, index, arr)=>{return condition})
+
+var arr=[10,12,13,14]
+var x=arr.every((data)=>{return data>9})
+alert(x) // true
+
+
+var arr=[10,12,13,14]
+var x=arr.every((data)=>{return data>13})
+alert(x) // false
+
+
+some()
+============
+ 
+=> some function is used to check whether any elements of array satisfying given condition or not
+=>it return true if any elements of array satisfying given condition  otherwise it returns false.
+
+var arr=["RAM","MOHAN","ROHAN","SHYAM"]
+arr.some(function(data,index,arr){
+	return condition
+})
+
+var a=arr.some((data)=>{
+return data[0]=='R'
+})
+
+
+
+reduce()
+===============
+=> reduce function is used to element of array in single value by applying some functionality.
+
+var arr=[1,2,3,4,5,66,78,9,]   //trailing comma
+
+Syntax
+============
+
+arr.reduce((t,data,index,arr)=>{})
+
+t=> initial value / previusly return value
+
+<script>
+var arr=[1,2,3,4,5,66,78,9,]   //trailing comma
+var x=arr.reduce((total,data,index,arr)=>{
+	total=total+data
+	return total
+})
+document.write(x)
+</script>
+
+
+splice()
+==============
+
+splice function is used to add/remove element to/from array
+=> it update original array
+
+var arrr=["RAM","MOHAN","SHOHAN"]
+arr.splice((s,l,item1,item2,item3,.....itemN)=>{}) 
+
+X=> Start
+y=> how many element we want to remove // length
+
+
+<script type="text/javascript">
+	var arr=["RAM","MOHAN","SHOHAN"]
+	document.write("original arr :"+arr+"<br/>") 
+    var x=arr.splice(1,1,"TECHPILE")
+    document.write("updated arr :"+arr+"<br/>") 
+    document.write(x) // return value 
+</script>
+
+
+keys()
+=========================
+key function is used to create array iterator of array key (index)
+
+
+
+[object Array Iterator]
+
+var arr=["RAM","MOHAN","SOAHN"]
+var x=arr.keys()  // [0,1,2]
+var y=arr.entries()
+[0,"RAM"]
+[1,"MOHAN"]
+[2,"SOAHN"]
+
+
+<script type="text/javascript">
+	var arr=["RAM","MOHAN","SOAHN"]
+	var x=arr.keys()  // [0,1,2]
+	for(var i of x)
+		(
+			alert("keys: "+i)
+		)
+	document.write(x) //[object Array Iterator]
+</script>
+
+
+
+
+entries()
+=========================
+entries function is used to create array iterator of array key and value (index)
+
+
+var arr=["RAM","MOHAN","SOAHN"]
+	var x=arr.entries()  // [0,1,2]
+	for(var i of x)
+		(
+			alert("keys and value: "+i)
+		)
+
+
+
+vlaues()
+=========================
+values function is used to create array iterator of array value (index)
+
+var arr=["RAM","MOHAN","SOAHN"]
+	var x=arr.values()  // [0,1,2]
+	for(var i of x)
+		(
+			alert("values: "+i)
+		)
+
+
+toString
+=====================
+=> to string funciton is used to convet elements of array into string separeted by comma
+
+var arr=["RAM","JOHN","MOHIT"]
+VAR x=arr.toString()
+document.write(x)
+
+
+concat()
+=============
+concat function is used to  conver multiple array into one array
+
+var arr1=[1,2,3,,5,6]
+var arr2=[23,54,23,67,32]
+var arr3=["ram","shyam","bipin"]
+
+var arr=arr1.concat(arr2,arr3)
+document.write(arr) // [1,2,3,,5,6,23,54,23,67,32,"ram","shyam","bipin"]
+
+var str=""
+arr.forEach((data)=>{
+	str=str+data+"/"
+})
+
+document.write(arr)
+
+flat()
+========================================
+flat function is used to multi dimensional array into single dimension array
+
+var arr=["ram",45,["Lucknow",226022,[1,2,3]]]
+var nAr=arr.flat() //["ram",45,"Lucknow",226022,1,2,3] // flat
+document.write(nAr)
+
+
+find()
+=========
+
+find function is used to return first element of array that satisfying condition
+
+syntax
+============
+
+arr.find((data,index,arr)=>{
+	return condition
+})
+
+var arr=["ram","shyam","bipin"]
+	var x=arr.find((data,index,arr)=>{
+	return data[1]=="a"
+   })
+   document.write(x)
+
+
+findIndex()
+=================
+findIndexd function is used to return index of first element that satisfying condition
+
+syntax
+==============
+
+
+arr.findIndex((data,index,arr)=>{
+	return condition
+})
+
+var arr=[34,45,67,21,345,764,346]
+var a=arr.findIndex((data)=>{
+	return data%2==1 && data%7==0
+})
+
+document.write(a)
+
+
+
+=================================
+class ke under function(method)==
+=================================
+
+module= collection of variable function and class
+package=collection of module (.js file)
+
+
+
+What is module
+===================================================================
+
+
+module is the collection of variable function and class save to single file (.js extention)
+
+every .js extention file is treated like module
+
+file1.js          // location same  file1.js , file2.js=
+===========
+export var a=10
+export function demo()
+{
+	alert ("ok")
+}
+export class text
+{
+	demo1()
+	{
+
+	}
+}
+
+
+
+
+file2.js
+================
+import{a,demo,Text} from "./file1.js";
+
+alert(a)
+demo()
+
+var obj= new Text()  // new constructor
+obj.demo1()
+
+
+
+index.html
+===============
+
+<script type="moduel" src="./file2"></script>
+
+
+mamber aliasing // rename
+=================================
+import {firstname as fn,lastname as ls,fun1 as f1,fun2 as f2,Test as t} from "./m1.js"
+
+=====================================================================================
+
+
+Destructuring
+=================
+
+Destructuring is a process to hold element of array/ object into the corresponding variable
+
+var arr=["ram",45,7800,'techpile']
+var name=arr[0]
+var age=arr[1]
+var salary=arr[2]
+var cmp=arr[4]
+
+[name,age,salary,cmp]=arr
+
+================================================================
+
+object
+========================================
+
+object is the collection of properties(variable) and methods(function).
+
+=>if we want represent a group of value in from of key/value then we have to use object data type.
+=> in javascript object is denote {},
+=> here value can be duplicate key can't be duplicate
+
+
+syntax 
+================
+
+{key: val1, key:val2.......keyN:valN}
+
+exp: 
+=========
+var studentInFo={name:"Ram", age:45, salary:2500}
+=========================================================
+
+
+
+How to access elements of object
+======================================
+
+Syntax
+================
+
+objectname[key]  // value of key
+=====================================
+studentInFo[name]  //ROHAN
+studentInFo[age]  // 45
+studentInFo[salary]  // 2500
+
+
+
+var studentInFo={'name':"Ram",'age':45,salary:2500}
+console.log(`
+Name : ${studentInFo['name']}
+Age : ${studentInFo['age']} 
+Salary : ${studentInFo.salary} 
+`);
+
+var obj=[1:"ram",2:"deepak", 'a b']
+console.log(`first value : ${obj[1]}
+             third value : ${obj['a b']}`)
+
+
+=> if we are trying to duplicate key then first value of key will be replace with new value of key
+
+var obj=[1:"ram",2:"deepak", 'a b':"deepak", 1:"gautam"]
+
+console.log(obj[1]) // gautam
+
+
+
+
+
+========================================
+var obj1={name:"rohan",age:34}
+
+How to change value of key
+=================================
+
+obj.name="rohit"
+
+console.log(obj1) // {name:"rohit",age:34}
+
+
+How to add new key in a object
+================================
+
+Syntax
+=============d
+
+objectName.key=value
+obj.salary=3323
+console.log(obj1) //  {name:"rohit",age:34,salary:3323}
+
+==========================================================
+
+
+var  empInfo={
+	name:"rohan",
+	salary:50000,
+	address:{
+	     city:"lucknow",
+	     pincode:226022
+	}
+}
+
+console.log('')
+
+=======================================
+
+var obj={
+	name:"ram",
+	fun:function(){
+	console.log("i am from fun key")
+	}
+
+console.log(`${obj.name}
+             ${obj.fun}`)
+}
+==========================================================================
+
+var obj1={
+	city:"lucknow",
+	pincode:226022
+}
+
+var obj={
+	name:"rahul",
+	Age:'23',
+    salary:'87889',
+    demo(){
+    console.log(`city :${obj1.city}, Pincode : ${obj1.pincode}`)
+    }
+}
+
+console.log(`name : ${obj.name}, Age : ${obj.Age}, Salary :${obj.salary}`)
+
+obj.demo()
+
+
+=======================================================================
+
+var obj={name:"Deepak", Salary:34567, Address :"Lucknow",  Company: "TCS",
+         showDate(){console.log(`Name : ${this.name}, Salary : ${this.Salary}, Address :${this.Address}, Company : ${this.Company}`)}}
+
+obj.showDate()
+
+
+====================================================================================
+
+Mambership operator
+
+
+
+
+hasOwnProperty
++++++++++++++++++++++
+
+hasOwnProperty is used to check whether given key present in object or not
+
+it return true if given key present in given object otherwise it return false
+
+
+var obj={city: "lucknow", pincode: 283766}
+
+console.log(obj.hasOwnProperty("name") ) // false
+console.log(obj.hasOwnProperty("pincode"))  // true
+
+
+=====================================================
+
+var obj={naem:"Deepak", age:32, salary:45678}
+
+for(var i in obj)
+{
+	console.log(`value of ${i} is : ${obj[i]}`)
+}
+
+=============================
+
+keys
+=============
+
+keys function is used to create an array iteration with key of an object
+
+var obj1={
+	1:1,
+	2:2,
+	3:34
+} 
+
+[1,2,3]
+
+Syntax
++++++++++++++++++++++++++++++++++++++
+
+var arr = Object.keys(objectName)
+
+Exp:
+
+var x=Object.keys(obj1)   //[1,2,3]
+console.log(x)
+
+for(var a of x)
+{
+	console.log(`${a} : ${obj1[a]}`)
+}
+
+
+values
+=============
+var obj1={
+	1:1,
+	2:2,
+	3:34
+} 
+
+var x=Object.values(obj1)   //[1,2,34]
+console.log(x)
+
+for(var a of x)
+{
+	console.log(`${a} : ${obj1[a]}`)
+}
+
+==========================================================
+
+var arr= new Array()
+var obj= new object({name:"deepak",age:13})
+
+console.log(obj.name)
+console.log(obj.age)
+
+===========================================================
+
+
+Array of object
+=============================
+
+it is collection of object.
+
+var arr=[{},{},{},{},................{}]
+
+{}=> {key1:value1,key2:value2,..................,keyN:valueN}
+
+var studentInfo=[
+	{name:"ram",age:45,branch:'MEAR',city:"LKO"},
+	{name:"deepak",age:23,branch:'CS',city:"kanpur"},
+	{name:"ajay",age:15,branch:'.NET',city:"Varansi"},
+	{name:"vijay",age:45,branch:'B.TECH',city:"Ambedkar Nagar"}
+]
+
+
+
+How to access of element of array of object
+=======================================================
+
+studentInfo[0]
+studentInfo[0].name
+studentInfo[0].age
+studentInfo[0].[branch]
+studentInfo[0].city
+
+
+
+
+
+
+
+
+
+
+reference variable=> class ke object ko hold karne ke liye jis variable ka use kiya jata hai 
+
+instance variable=> constructor ke ander ke variable ko
+
+constroctor => method
+
+ECMA
+==========
+
+ECMA stand for European computer Manufacturers Association
+ECMA is international, membership based non profit standerds orgnizaton
+ECMA is a  stand for suport client side scripting across all web browser.
+Ecma is also used to developed server side application by using node.js
+
+ECMS 5  2009
+ECMS 6  2015
+
+
+Constrocter
+==============
+constrocter is a special method in javascript
+in js constrocter key is used to create constrocter method
+constrocter will be esecuted autometically at the time of object creation.
+the main purpose of constroter is to declare and initilization instance variables(properties of object)
+per object constrocter will be executed only one
+
+
+
+Method Vs constrocter
+===================================
+
+name of methods can be any name
+constrocter name should be constrocter
+
+Method will be executed if we call that method
+constrocter will be executed autometically at the time of object cretion.
+
+Per object, method can be called any number of times
+per object constrocter will be executed only one
+
+inside method we can bussines logic
+inside constrocter we have to declare and initilize 
+
+
+class in method three type
+=================================
+instance menthod
+constrocter method
+
+
+
+
+this istance variable
+
+instance variable vs statics variable
+=========================================
+
+These are object level varible 
+These are class level variable
+
+for every object saperated copy will be created
+A class copy will be created class level and shared by all object of that class
+
+by using one object reference, if we are trying to perform any changes to the instance variable then those changes won't be reflected to the remaiuning object
+
+
+instance method vs statics method
+=========================================
+
+inside instance method we can 
+
+static method
+
+
+inheritance=> inheritance allows us to define a class that inherits all the method  and properties from another claass
+
+the process of inheritance one class member to another class is known as inheritance
+
+single inheritance
+muilti-level inheritance
+Hierarchical inheritance
+multiple inheritance
+Hybrid inheritance
+Cyclic inheritance
+
+
+
+Polymorphism
+===================
+
+poly means many
+morphism means forms
+Polymorphism means  'many Forms'
+Polymorphism gives a concept to use one methods in many forms within same scope
+
+
+
+method overloading is the class having methods that are the same name with different arguments
+Arguments different will  be based on a number arguments and type 
+
+s
+When members availabe in the parents class
+
+
+
+
+
+
+
+
+
+{
+1.method over loading (no support js)
+=> if you create one class and under create 2 mathod same name , when you access class any method 
+2.method over writing
+=> every time change for child method
+
+=>
+}
+
+
+
+Encapsulation
+=====================
+
+1. The process of grouping/binding/ encapsulating data (attribute and method) into a  single unit(class) is known as encapsulation
+2. Encapsulation data can not access directly outside of the class
+3. private number are responsibe for data encapsulation
+4. Encapsulation is used to avoid unauthorised access
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var : reasign redeclear
+let : not reasign redeclear
+const : not reasign not redeclear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module: ak page ke function variable aur class ko dusare page me use karna chahte hai to module banate hai
+
+// rest=packing process => conver element to array
+// sprate=unpacking process => array convert to return element sperate by comma

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>task 1</title>
+</head>
+<body>
+<p id="detail"></p>
+
+	<script type="text/javascript">
+		var personaldetail=[{Id:"APP22131",Name:"Rahul",Collage:"GP Lucknow",Branch:"CSE"},
+			          {Id:"APP22132",Name:"Sauraurabh",Collage:"GP Sultanpur",Branch:"CSE"},
+			          {Id:"APP22133",Name:"Abhishekh",Collage:"GP Rampur",Branch:"CSE"},
+			          {Id:"APP22134",Name:"Ruchi",Collage:"GP Varanasi",Branch:"CSE"},]
+		
+		var res=''
+		for(var i in personaldetail)   //console.log(personaldetail[i])
+		{
+			res+=`<select style="margin:10px">
+			<option>--select--</option>
+			<option>${personaldetail[i].Id}</option>
+			<option>${personaldetail[i].Name}</option>
+			<option>${personaldetail[i].Collage}</option>
+			<option>${personaldetail[i].Branch}</option>
+			</select>`
+		};
+		document.querySelector('#detail').innerHTML=res
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>random color</title>
+	<style type="text/css">
+		div
+		{
+			width: 170px;
+			height: 40px;
+			background: red;
+			border: 10px groove gray;
+			text-align: center;
+			line-height: 40px;
+			border-radius: 5px;
+			font-size: 30px;
+			float: left;
+			margin: 2px;
+		}
+		input{display: none;}
+	</style>
+</head>
+<body onload="demo()">
+	<input type="text" id="txt" name="">
+	<p></p>
+
+	<script type="text/javascript">
+		var demo=()=>
+		{
+		var s="0123456789abcdef"
+		var dv=""
+		for(var i=0; i<105; i++)
+		{
+		  var color="#"
+		  var color1="#"
+		  for(var a=0; a<6; a++)
+		  {
+		  	var rindex=Math.floor(Math.random()*16)
+		  	var rindex1=Math.floor(Math.random()*16)
+		  	var rCh=s[rindex]
+		  	var rCh1=s[rindex1]
+		  	color+=rCh
+		  	color1+=rCh1
+		  }
+		  dv+="<div onclick='demo1(this)' style='background:"+color+";  border: 8px solid "+color1+"'>"+color+"</div>"
+		}
+		document.querySelector('p').innerHTML=dv
+		}
+		var demo1=(x)=>
+		{
+			var x=document.querySelector("input").value=x.innerText
+			txt.select()
+			document.execCommand("Copy")
+			alert("text coppy")
+
+
+		}
+	</script>
+</body>
+</html>

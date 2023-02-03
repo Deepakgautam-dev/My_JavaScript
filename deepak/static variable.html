@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Test{
+			static Company ="Techpile"  // static varible
+			constructor()
+			{
+				this.Name="deepak"      // instance varible
+				this.Salary=5000
+			}
+			demo()
+			{
+				console.log(`Name :${this.Name}
+					         Salary: ${this.Salary}
+					         Company: ${Test.Company}`)
+			}
+			
+		}
+		var obj=new Test()
+		obj.demo()
+		console.log(obj.Name)
+		console.log(obj.Salary)
+		console.log(Test.Company)
+
+
+		var obj1=new Test()
+		obj1.Name="Satyan Shahu"
+		obj1.Salary="TCS"
+		console.log(obj1.Name)
+		console.log(obj1.Salary)
+		console.log(Test.Company)
+
+		obj1.demo()
+
+
+	</script>
+
+</body>
+</html>

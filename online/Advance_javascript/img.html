@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+
+<input type="file" name="">
+<img src="">
+
+<script type="text/javascript">
+	window.onload=function(){
+		var imgData=window.localStorage.getItem('img');
+		document.querySelector('img').src=imgData;
+	}
+	function uploadPic(){
+		var reader=new FileReder();
+		reader.addEventListener('load',function(){
+			document.querySelector('img').src=reader.result;
+			window.localStorage.setItem('img',reder.result)
+		});
+		reader.readDataURL(object.file[0])
+	}
+</script>
+</body>
+</html>

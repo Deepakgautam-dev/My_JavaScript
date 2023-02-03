@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>no copy</title>
+</head>
+<body>
+	<p>TECHPILE TECHNOLOGY PVT.LTD</p>
+	<input type="text" name="">
+
+	<script type="text/javascript">
+	// 	window.addEventListener("cut", function(){alert("cut option desable hear")
+	 // event.preventDefault()})
+	// 	window.addEventListener("copy", function(){alert("copy option desable hear")
+	 // event.preventDefault()})
+	// 	window.addEventListener("paste", function(){alert("past option desable hear")
+	 // event.preventDefault()})
+
+	// 	window.addEventListener("contextmenu", function(){alert("right click desabled here..")
+     //    event.preventDefault()})
+
+
+		//or
+	function demo()
+	{
+		alert("right click, cut ,copy,past")
+		event.preventDefault()
+	}
+	window.addEventListener("copy",demo)
+	window.addEventListener("paste",demo)
+	window.addEventListener("cut",demo)
+	window.addEventListener("contextmenu",demo)
+	</script>
+</body>
+</html>

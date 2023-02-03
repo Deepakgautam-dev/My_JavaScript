@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body
+		{
+			background: url(../../img1.jpg);
+		}
+		#outer
+		{
+			margin: 80px auto;
+			min-height: 400px;
+			width: 400px;
+			border: 10px double white;
+			background: rgba(255, 255, 255, .5);
+			box-shadow: 0px 0px  20px 10px black;
+
+		}
+		b,i
+		{
+			font-size: 30px;
+		}
+		.inner
+		{
+			background: black;
+			color: white;
+			border-radius: 5px;
+			box-shadow: 0px 0px 0px 10px 3px black inset;
+			border: 5px double white;
+			font-size: 25px;
+			padding: 10px;
+		}
+		.a
+		{
+			height: 80px;
+			width: 80px;
+			background: black;
+			border: 10px groove black;
+			border-radius: 5px;
+			text-align: center;
+			float: left;
+			line-height: 80px;
+			font-size: 80px;
+			color: white;
+			box-shadow: 0px 0px 20px 3px white;
+			margin: ;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<div id="outer"><br/><br/>
+<b>Your score: 0/0</b><br><br>
+<div class="inner">Start Game: Select number</div><br>
+<i>Generated number</i><br><br><br>
+
+<div class="a" onclick="demo(this)">1</div>
+<div class="a" onclick="demo(this)">2</div>
+<div class="a" onclick="demo(this)">3</div>
+<div class="a" onclick="demo(this)">4</div>
+</div>
+
+<script type="text/javascript">
+	var score =0
+	var t=0
+	function demo(x)
+	{
+		var rnd=Math.floor(Math.random()*4)+1
+		var s=document.querySelector('b')
+		var i=document.querySelector('i')
+		var msg=document.querySelector('.inner')
+		// alert(rnd)
+		// alert(x.innerText)
+		i.innerText="Generated number :"+rnd
+		if(rnd==x.innerText)
+		{
+			msg.innerText="Congratulation you win.."
+			msg.style.color="green"
+			score++
+		}
+		else
+		{
+			msg.innerText="Sorry you loss.."
+			msg.style.color="red"
+			t++
+		}
+		s.innerText="Your score :"+score+"/"+t
+	}
+</script>
+</body>
+</html>

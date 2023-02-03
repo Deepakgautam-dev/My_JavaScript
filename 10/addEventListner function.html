@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<button>CLICK ME</button>
+
+	<script type="text/javascript">
+
+		var element=document.querySelector('button')
+		element.addEventListener("click",demo)
+		element.addEventListener("click",demo1)
+		element.addEventListener("click",demo2)
+
+		var demo=()=>
+		{
+			alert("Function is first")
+		}
+		var demo1=()=>
+		{
+			alert("Function is second")
+		}
+		var demo2=()=>
+		{
+			alert("Function is third")
+		}
+
+	</script>
+</body>
+</html>

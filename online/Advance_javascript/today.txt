@@ -1,0 +1,66 @@
+Class
+===========
+
+class is the logical intities
+Object is the physical intities
+
+litrature;
+
+what is promise:
+=================
+
+It is special object (class level) 
+let obj = new Promise() => object => type promise object
+
+promise is class object whose constructor takes function as argument, this function as Argument.
+
+state
+============
+pending : pending
+failure : handle try and catch to handle exception
+success : then do anything
+
+Note: for promise one event has to happen
+then we can collback
+
+why callBack JS
+============================ terminator
+
+
+
+
+API (Application programming interface) : is a general term
+web api : any service web or internet or web api (web service)
+
+1. Soap Api : simple Object Access protocal
+2. Rest Api : Representational State transfer
+
+intetrOperability : it is feature using which two application can communication with each without knowing each other language
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
