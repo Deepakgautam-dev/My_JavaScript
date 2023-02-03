@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./CSS/bootstrap.css">
+	<title>CRUD</title>
+	<style type="text/css">
+		.form-control{margin-bottom: 9px;}
+	</style>
+</head>
+<body>
+	<div class="container py-5">
+		<div class="col-4 mx-auto">
+			Number :<br/>
+			<input type="text" placeholder="Enter your name" class="form-control" id="name" name="">
+			Phone :<br/>
+			<input type="text" placeholder="Enter your mobile" class="form-control" id="mobno" name="">
+			Email :<br/>
+			<input type="email" placeholder="Enter your email" class="form-control" id="email" name="">
+			City :<br/>
+			<input type="text" placeholder="Enter your city" class="form-control" id="city" name="">
+			File :<br/>
+			<input type="file" placeholder="Enter your name" class="form-control" id="fu" name=""><br/>
+			<input type="button" value="save" class="btn btn-warning" id="btn" onclick="add()"/>
+		</div><br/><br/>
+    
+		<div id="tbl"></div>
+	</div>
+
+
+
+<script type="text/javascript">
+
+
+                                    // { Show data Code  step-1 }
+
+
+
+		var studentInfo=[]
+		function add()
+		{
+			var Name=document.querySelector('#name')
+			var Mobile=document.querySelector('#mobno')
+			var Email=document.querySelector('#email')
+			var City=document.querySelector('#city')
+			var File=document.querySelector('#fu')
+			var Button=document.querySelector('#btn')
+
+			if(Name.value!="" && Mobile.value!="" && Email.value!="" && City.value!="")
+			{
+
+					if (Button.value=='save')                  // { Update data Code After 1 } 
+					{
+						studentInfo.push({Name:Name.value,Mobile:Mobile.value,Email:Email.value,
+		                          City:City.value,File:File.value.split('\\').pop()})
+					}
+					else if(Button.value=='update')            // { Update data Code After 2 }
+					{
+						studentInfo[index].Name=Name.value
+						studentInfo[index].Mobile=Mobile.value
+						studentInfo[index].Email=Email.value
+						studentInfo[index].City=City.value
+					}
+		        showData()   
+				}
+				else
+				{
+					alert("Please fill information ?")
+				}
+		}
+
+
+
+                               // { Show data Code  step-2 }
+
+
+
+
+function showData()
+{
+	var res="<table class='table table-hover'><th>Sr. No</th><th>Name</th><th>Phone</th><th>Email</th><th>City</th><th>Picture</th><th>Edit</th><th>Delete</th>"
+	var sr=0
+	studentInfo.forEach((data,index)=>{
+		sr++;
+		res+=`<tr><td>${sr}</td>
+		          <td>${data.Name}</td>
+		          <td>${data.Mobile}</td>
+		          <td>${data.Email}</td>
+		          <td>${data.City}</td>
+		          <td><img src='./images/${data.File}' style="width:50px;"/></td>
+		          <td><button class="btn btn-warning" onclick="editDate(this)">Edit</button></td>
+		          <td><button class="btn btn-danger" onclick="deletedata(this)">Delete</button></td></tr>`
+	})
+	
+      document.querySelector('#tbl').innerHTML=res
+}
+
+
+                               // { Delete data Code  step-3 }
+
+
+
+function deletedata(x)
+{
+	var index=x.parentElement.parentElement.firstElementChild.innerText-1
+	if(confirm("Are you sour you want to delete"))
+	{
+	studentInfo.splice(x,1);
+	showData()
+	}
+}
+
+
+
+                               // { Edit data Code  step-4 }
+
+
+
+function editDate(y)
+{
+  index=y.parentElement.parentElement.firstElementChild.innerText-1
+  var Button=document.querySelector('#btn')
+  Button.value="update"
+
+  var Name=document.querySelector('#name')
+	var Mobile=document.querySelector('#mobno')
+	var Email=document.querySelector('#email')
+	var City=document.querySelector('#city')
+	var File=document.querySelector('#fu')
+
+	Name.value=studentInfo[index].Name
+	Mobile.value=studentInfo[index].Mobile
+	Email.value=studentInfo[index].Email
+	City.value=studentInfo[index].City
+	File.value=studentInfo[index].File			
+}
+
+
+		
+	</script>
+
+</body>
+</html>
